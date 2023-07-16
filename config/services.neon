@@ -22,6 +22,10 @@ services:
 		type: LAC\Modules\Tables\Services\GameDataExtension
 		tags:
 			- gameDataExtension
+	tables.menu:
+		type: LAC\Modules\Tables\Services\MenuExtension
+		tags:
+			- menuExtension
 search:
 	tables.controllers:
 		in: %tables.root%src/Controllers
