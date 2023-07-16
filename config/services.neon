@@ -1,0 +1,33 @@
+includes:
+	- ./services.php
+parameters:
+	tables:
+	routing:
+		routeFiles:
+			- %tables.root%config/routes.php
+services:
+	tables.module:
+		type: LAC\Modules\Tables\Tables
+		tags:
+			- modules
+	tables.newGame:
+		type: LAC\Modules\Tables\Services\NewGameDecorator
+		tags:
+			- newGameDecorator
+	tables.resultParser:
+		type: LAC\Modules\Tables\Services\ResultParserExtension
+		tags:
+			- resultParserExtension
+	tables.gameData:
+		type: LAC\Modules\Tables\Services\GameDataExtension
+		tags:
+			- gameDataExtension
+search:
+	tables.controllers:
+		in: %tables.root%src/Controllers
+		extends:
+			- Lsr\Core\Controller
+			- Lsr\Core\ApiController
+			- Lsr\Core\CliController
+		tags:
+			- controllers

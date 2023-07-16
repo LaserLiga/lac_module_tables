@@ -1,0 +1,34 @@
+{
+	"name": "laser-arena-control/tables_module",
+	"type": "module",
+	"version": "0.1",
+	"description": "Module for the Laser arena control system adding tables.",
+	"minimum-stability": "dev",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Tomáš Vojík",
+			"email": "vojik@wboy.cz"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packages.laserliga.cz"
+		},
+		{
+			"type": "path",
+			"url": "../*"
+		}
+	],
+	"require": {
+		"laser_arena_control/core_module": "*",
+		"lsr/core": "^0.2",
+		"lsr/helpers": "^0.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"LAC\\Modules\\Tables\\": "src/"
+		}
+	}
+}

@@ -1,0 +1,1985 @@
+{
+	"_readme": [
+		"This file locks the dependencies of your project to a known state",
+		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+		"This file is @generated automatically"
+	],
+	"content-hash": "7bd155b9e22c02c8a9ce9fe9e57a2155",
+	"packages": [
+		{
+			"name": "dibi/dibi",
+			"version": "v4.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/dg/dibi.git",
+				"reference": "520119740dcdcaf72d3b4d5855695339b5167da0"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/dg/dibi/zipball/520119740dcdcaf72d3b4d5855695339b5167da0",
+				"reference": "520119740dcdcaf72d3b4d5855695339b5167da0",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=7.2"
+			},
+			"replace": {
+				"dg/dibi": "*"
+			},
+			"require-dev": {
+				"nette/di": "^3.0",
+				"nette/tester": "~2.0",
+				"phpstan/phpstan": "^0.12",
+				"tracy/tracy": "~2.2"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "4.2-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				}
+			],
+			"description": "Dibi is Database Abstraction Library for PHP",
+			"homepage": "https://dibiphp.com",
+			"keywords": [
+				"access",
+				"database",
+				"dbal",
+				"mssql",
+				"mysql",
+				"odbc",
+				"oracle",
+				"pdo",
+				"postgresql",
+				"sqlite",
+				"sqlsrv"
+			],
+			"support": {
+				"issues": "https://github.com/dg/dibi/issues",
+				"source": "https://github.com/dg/dibi/tree/v4.2"
+			},
+			"time": "2022-12-21T01:06:10+00:00"
+		},
+		{
+			"name": "gettext/gettext",
+			"version": "v5.7.0",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/php-gettext/Gettext.git",
+				"reference": "8657e580747bb3baacccdcebe69cac094661e404"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/php-gettext/Gettext/zipball/8657e580747bb3baacccdcebe69cac094661e404",
+				"reference": "8657e580747bb3baacccdcebe69cac094661e404",
+				"shasum": ""
+			},
+			"require": {
+				"gettext/languages": "^2.3",
+				"php": "^7.2|^8.0"
+			},
+			"require-dev": {
+				"brick/varexporter": "^0.3.5",
+				"friendsofphp/php-cs-fixer": "^3.2",
+				"oscarotero/php-cs-fixer-config": "^2.0",
+				"phpunit/phpunit": "^8.0|^9.0",
+				"squizlabs/php_codesniffer": "^3.0"
+			},
+			"type": "library",
+			"autoload": {
+				"psr-4": {
+					"Gettext\\": "src"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Oscar Otero",
+					"email": "oom@oscarotero.com",
+					"homepage": "http://oscarotero.com",
+					"role": "Developer"
+				}
+			],
+			"description": "PHP gettext manager",
+			"homepage": "https://github.com/php-gettext/Gettext",
+			"keywords": [
+				"JS",
+				"gettext",
+				"i18n",
+				"mo",
+				"po",
+				"translation"
+			],
+			"support": {
+				"email": "oom@oscarotero.com",
+				"issues": "https://github.com/php-gettext/Gettext/issues",
+				"source": "https://github.com/php-gettext/Gettext/tree/v5.7.0"
+			},
+			"funding": [
+				{
+					"url": "https://paypal.me/oscarotero",
+					"type": "custom"
+				},
+				{
+					"url": "https://github.com/oscarotero",
+					"type": "github"
+				},
+				{
+					"url": "https://www.patreon.com/misteroom",
+					"type": "patreon"
+				}
+			],
+			"time": "2022-07-27T19:54:55+00:00"
+		},
+		{
+			"name": "gettext/languages",
+			"version": "2.10.0",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/php-gettext/Languages.git",
+				"reference": "4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/php-gettext/Languages/zipball/4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab",
+				"reference": "4d61d67fe83a2ad85959fe6133d6d9ba7dddd1ab",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=5.3"
+			},
+			"require-dev": {
+				"phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4"
+			},
+			"bin": [
+				"bin/export-plural-rules"
+			],
+			"type": "library",
+			"autoload": {
+				"psr-4": {
+					"Gettext\\Languages\\": "src/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Michele Locati",
+					"email": "mlocati@gmail.com",
+					"role": "Developer"
+				}
+			],
+			"description": "gettext languages with plural rules",
+			"homepage": "https://github.com/php-gettext/Languages",
+			"keywords": [
+				"cldr",
+				"i18n",
+				"internationalization",
+				"l10n",
+				"language",
+				"languages",
+				"localization",
+				"php",
+				"plural",
+				"plural rules",
+				"plurals",
+				"translate",
+				"translations",
+				"unicode"
+			],
+			"support": {
+				"issues": "https://github.com/php-gettext/Languages/issues",
+				"source": "https://github.com/php-gettext/Languages/tree/2.10.0"
+			},
+			"funding": [
+				{
+					"url": "https://paypal.me/mlocati",
+					"type": "custom"
+				},
+				{
+					"url": "https://github.com/mlocati",
+					"type": "github"
+				}
+			],
+			"time": "2022-10-18T15:00:10+00:00"
+		},
+		{
+			"name": "graham-campbell/result-type",
+			"version": "1.1.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/GrahamCampbell/Result-Type.git",
+				"reference": "60c5f57bee20beb1a4a3cc5fe9170de4a64521d2"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/60c5f57bee20beb1a4a3cc5fe9170de4a64521d2",
+				"reference": "60c5f57bee20beb1a4a3cc5fe9170de4a64521d2",
+				"shasum": ""
+			},
+			"require": {
+				"php": "^7.2.5 || ^8.0",
+				"phpoption/phpoption": "^1.9.1"
+			},
+			"require-dev": {
+				"phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
+			},
+			"default-branch": true,
+			"type": "library",
+			"autoload": {
+				"psr-4": {
+					"GrahamCampbell\\ResultType\\": "src/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Graham Campbell",
+					"email": "hello@gjcampbell.co.uk",
+					"homepage": "https://github.com/GrahamCampbell"
+				}
+			],
+			"description": "An Implementation Of The Result Type",
+			"keywords": [
+				"Graham Campbell",
+				"GrahamCampbell",
+				"Result Type",
+				"Result-Type",
+				"result"
+			],
+			"support": {
+				"issues": "https://github.com/GrahamCampbell/Result-Type/issues",
+				"source": "https://github.com/GrahamCampbell/Result-Type/tree/1.1"
+			},
+			"funding": [
+				{
+					"url": "https://github.com/GrahamCampbell",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
+					"type": "tidelift"
+				}
+			],
+			"time": "2023-02-25T23:46:23+00:00"
+		},
+		{
+			"name": "laser_arena_control/core_module",
+			"version": "dev-main",
+			"dist": {
+				"type": "path",
+				"url": "../Core",
+				"reference": "d8075e77933984694162c4149e0d1279f8ca68a0"
+			},
+			"type": "library",
+			"autoload": {
+				"psr-4": {
+					"LAC\\Modules\\Core\\": "src/"
+				}
+			},
+			"license": [
+				"proprietary"
+			],
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Core for every Laser arena control system module.",
+			"transport-options": {
+				"relative": true
+			}
+		},
+		{
+			"name": "latte/latte",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/latte.git",
+				"reference": "e3c707ab9a60daf660605db7c60507343d3947d4"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/latte/zipball/e3c707ab9a60daf660605db7c60507343d3947d4",
+				"reference": "e3c707ab9a60daf660605db7c60507343d3947d4",
+				"shasum": ""
+			},
+			"require": {
+				"ext-json": "*",
+				"ext-tokenizer": "*",
+				"php": ">=8.0 <8.3"
+			},
+			"conflict": {
+				"nette/application": "<3.1.7",
+				"nette/caching": "<3.1.4"
+			},
+			"require-dev": {
+				"nette/php-generator": "^3.6 || ^4.0",
+				"nette/tester": "^2.0",
+				"nette/utils": "^3.0",
+				"phpstan/phpstan": "^1",
+				"tracy/tracy": "^2.3"
+			},
+			"suggest": {
+				"ext-fileinfo": "to use filter |datastream",
+				"ext-iconv": "to use filters |reverse, |substring",
+				"ext-mbstring": "to use filters like lower, upper, capitalize, ...",
+				"nette/php-generator": "to use tag {templatePrint}",
+				"nette/utils": "to use filter |webalize"
+			},
+			"default-branch": true,
+			"bin": [
+				"bin/latte-lint"
+			],
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.0-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "☕ Latte: the intuitive and fast template engine for those who want the most secure PHP sites. Introduces context-sensitive escaping.",
+			"homepage": "https://latte.nette.org",
+			"keywords": [
+				"context-sensitive",
+				"engine",
+				"escaping",
+				"html",
+				"nette",
+				"security",
+				"template",
+				"twig"
+			],
+			"support": {
+				"issues": "https://github.com/nette/latte/issues",
+				"source": "https://github.com/nette/latte/tree/master"
+			},
+			"time": "2023-03-09T01:37:02+00:00"
+		},
+		{
+			"name": "lsr/core",
+			"version": "0.2.23",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-core.git",
+				"reference": "3deb272eacd9df5b0230687cafc8a7b78a733511"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-core/zipball/3deb272eacd9df5b0230687cafc8a7b78a733511",
+				"reference": "3deb272eacd9df5b0230687cafc8a7b78a733511",
+				"shasum": ""
+			},
+			"require": {
+				"dibi/dibi": "^4.2",
+				"ext-ctype": "*",
+				"ext-fileinfo": "*",
+				"ext-gettext": "*",
+				"ext-mbstring": "*",
+				"ext-pdo_sqlite": "*",
+				"ext-simplexml": "*",
+				"ext-zip": "*",
+				"latte/latte": "^3.0",
+				"lsr/interfaces": "^0.2",
+				"lsr/logging": "^0.2",
+				"lsr/request": "^0.2",
+				"lsr/routing": "^0.2",
+				"nette/caching": "^3.2",
+				"nette/di": "^3.1",
+				"nette/http": "^3.2",
+				"vlucas/phpdotenv": "^5.5"
+			},
+			"require-dev": {
+				"phpstan/extension-installer": "^1.2",
+				"phpstan/phpstan": "^1.10",
+				"phpstan/phpstan-dibi": "^1.0",
+				"phpstan/phpstan-nette": "^1.2",
+				"phpunit/phpunit": "^10",
+				"roave/security-advisories": "dev-latest"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\Core\\": "src/"
+				}
+			},
+			"autoload-dev": {
+				"psr-4": {
+					"TestCases\\": "tests/TestCases/"
+				}
+			},
+			"scripts": {
+				"test": [
+					"./vendor/bin/phpunit"
+				],
+				"docs": [
+					"doxygen"
+				]
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core.",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-core/tree/v0.2.23",
+				"issues": "https://github.com/Heroyt/lsr-core/issues"
+			},
+			"time": "2023-06-30T13:03:09+00:00"
+		},
+		{
+			"name": "lsr/helpers",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-helpers.git",
+				"reference": "5a17dd115ed58684ccf4ee89b2eeffb822be32f2"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-helpers/zipball/5a17dd115ed58684ccf4ee89b2eeffb822be32f2",
+				"reference": "5a17dd115ed58684ccf4ee89b2eeffb822be32f2",
+				"shasum": ""
+			},
+			"require": {
+				"gettext/gettext": "^5.7",
+				"lsr/interfaces": "^0.2",
+				"lsr/routing": "^0.2",
+				"nette/utils": "^4.0",
+				"php": ">=8.1",
+				"tracy/tracy": "^2.9"
+			},
+			"require-dev": {
+				"phpstan/extension-installer": "^1.1",
+				"phpstan/phpstan": "^1.8",
+				"phpstan/phpstan-dibi": "^1.0",
+				"phpstan/phpstan-nette": "^1.0",
+				"phpunit/phpunit": "^9.5",
+				"roave/security-advisories": "dev-latest"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev",
+					"dev-master": "0.2.x-dev",
+					"dev-main": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\Helpers\\": "src/",
+					"Lsr\\Exceptions\\": "Exceptions/"
+				},
+				"files": [
+					"includes/functions.php"
+				]
+			},
+			"scripts": {
+				"analyze": [
+					"vendor/bin/phpstan analyze"
+				],
+				"test": [
+					"vendor/bin/phpunit"
+				]
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core - Helpers.",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-helpers/tree/v0.2.6",
+				"issues": "https://github.com/Heroyt/lsr-helpers/issues"
+			},
+			"time": "2023-02-26T14:07:02+00:00"
+		},
+		{
+			"name": "lsr/interfaces",
+			"version": "v0.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-interfaces.git",
+				"reference": "647260c19bb68f760b2724f72059c995b22e82ec"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-interfaces/zipball/647260c19bb68f760b2724f72059c995b22e82ec",
+				"reference": "647260c19bb68f760b2724f72059c995b22e82ec",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=8.1"
+			},
+			"require-dev": {
+				"phpstan/phpstan": "^1.8",
+				"phpunit/phpunit": "^9.5",
+				"roave/security-advisories": "dev-latest"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\": "src/"
+				}
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core - Interfaces.",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-interfaces/tree/v0.2",
+				"issues": "https://github.com/Heroyt/lsr-interfaces/issues"
+			},
+			"time": "2022-12-15T13:46:24+00:00"
+		},
+		{
+			"name": "lsr/logging",
+			"version": "v0.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-logging.git",
+				"reference": "7850d7a74e28a88887094b8e0ea67748d634ec5e"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-logging/zipball/7850d7a74e28a88887094b8e0ea67748d634ec5e",
+				"reference": "7850d7a74e28a88887094b8e0ea67748d634ec5e",
+				"shasum": ""
+			},
+			"require": {
+				"dibi/dibi": "^4.2",
+				"lsr/helpers": "^0.2-dev",
+				"psr/log": "*"
+			},
+			"require-dev": {
+				"phpstan/phpstan": "^1.8",
+				"phpunit/phpunit": "^9.5",
+				"roave/security-advisories": "dev-latest"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\Logging\\": "src/"
+				}
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core - Logging",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-logging/tree/v0.2",
+				"issues": "https://github.com/Heroyt/lsr-logging/issues"
+			},
+			"time": "2022-12-15T13:46:24+00:00"
+		},
+		{
+			"name": "lsr/request",
+			"version": "0.2.3",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-requests.git",
+				"reference": "c11481431cf3b3d009e47e6502e63d87fb6f496e"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-requests/zipball/c11481431cf3b3d009e47e6502e63d87fb6f496e",
+				"reference": "c11481431cf3b3d009e47e6502e63d87fb6f496e",
+				"shasum": ""
+			},
+			"require": {
+				"lsr/helpers": "^0.2",
+				"lsr/interfaces": "^0.2",
+				"lsr/routing": "^0.2",
+				"php": ">=8.1",
+				"psr/http-message": "^1"
+			},
+			"require-dev": {
+				"phpstan/phpstan": "^1.8",
+				"phpunit/phpunit": "^10",
+				"roave/security-advisories": "dev-latest"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\Core\\Requests\\": "src/"
+				}
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core - Requests.",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-requests/tree/v0.2.3",
+				"issues": "https://github.com/Heroyt/lsr-requests/issues"
+			},
+			"time": "2023-02-26T14:14:56+00:00"
+		},
+		{
+			"name": "lsr/routing",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/Heroyt/lsr-routing.git",
+				"reference": "0a18155f160439476b5cc8134808ab117322b10a"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/Heroyt/lsr-routing/zipball/0a18155f160439476b5cc8134808ab117322b10a",
+				"reference": "0a18155f160439476b5cc8134808ab117322b10a",
+				"shasum": ""
+			},
+			"require": {
+				"lsr/interfaces": "^0.2",
+				"php": ">=8.1"
+			},
+			"require-dev": {
+				"lsr/core": "^0.2",
+				"lsr/request": "^0.2",
+				"phpstan/phpstan": "^1.8",
+				"phpunit/phpunit": "^10"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"v0.2": "0.2.x-dev",
+					"dev-master": "0.2.x-dev",
+					"dev-main": "0.2.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Lsr\\Core\\Routing\\": "src/"
+				}
+			},
+			"autoload-dev": {
+				"psr-4": {
+					"Lsr\\Core\\Routing\\Tests\\TestCases\\": "tests/TestCases/",
+					"Lsr\\Core\\Routing\\Tests\\Mockup\\": "tests/src/"
+				}
+			},
+			"authors": [
+				{
+					"name": "Tomáš Vojík",
+					"email": "vojik@wboy.cz"
+				}
+			],
+			"description": "Laser framework core - Routing.",
+			"support": {
+				"source": "https://github.com/Heroyt/lsr-routing/tree/v0.2.5",
+				"issues": "https://github.com/Heroyt/lsr-routing/issues"
+			},
+			"time": "2023-02-26T14:18:32+00:00"
+		},
+		{
+			"name": "nette/caching",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/caching.git",
+				"reference": "ceb814d7f0a2bb4eb5afbe908467801001187745"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/caching/zipball/ceb814d7f0a2bb4eb5afbe908467801001187745",
+				"reference": "ceb814d7f0a2bb4eb5afbe908467801001187745",
+				"shasum": ""
+			},
+			"require": {
+				"nette/finder": "^2.4 || ^3.0",
+				"nette/utils": "^3.2 || ~4.0.0",
+				"php": ">=8.0 <8.3"
+			},
+			"require-dev": {
+				"latte/latte": "^2.11 || ^3.0",
+				"nette/di": "^3.1 || ^4.0",
+				"nette/tester": "^2.4",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.9"
+			},
+			"suggest": {
+				"ext-pdo_sqlite": "to use SQLiteStorage or SQLiteJournal"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.2-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "⏱ Nette Caching: library with easy-to-use API and many cache backends.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"cache",
+				"journal",
+				"memcached",
+				"nette",
+				"sqlite"
+			],
+			"support": {
+				"issues": "https://github.com/nette/caching/issues",
+				"source": "https://github.com/nette/caching/tree/v3.2.2"
+			},
+			"time": "2023-02-04T13:52:33+00:00"
+		},
+		{
+			"name": "nette/di",
+			"version": "v3.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/di.git",
+				"reference": "56b9f3dfab573da6e3e8289859a20166ad1b54db"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/di/zipball/56b9f3dfab573da6e3e8289859a20166ad1b54db",
+				"reference": "56b9f3dfab573da6e3e8289859a20166ad1b54db",
+				"shasum": ""
+			},
+			"require": {
+				"ext-tokenizer": "*",
+				"nette/neon": "^3.3 || ^4.0",
+				"nette/php-generator": "^4.0",
+				"nette/robot-loader": "^4.0",
+				"nette/schema": "^1.2.3",
+				"nette/utils": "^4.0",
+				"php": ">=8.0 <8.3"
+			},
+			"require-dev": {
+				"nette/tester": "^2.4",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.9"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.2-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP features.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"compiled",
+				"di",
+				"dic",
+				"factory",
+				"ioc",
+				"nette",
+				"static"
+			],
+			"support": {
+				"issues": "https://github.com/nette/di/issues",
+				"source": "https://github.com/nette/di/tree/v3.2"
+			},
+			"time": "2023-03-23T15:16:43+00:00"
+		},
+		{
+			"name": "nette/finder",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/finder.git",
+				"reference": "027395c638637de95c8e9fad49a7c51249404ed2"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/finder/zipball/027395c638637de95c8e9fad49a7c51249404ed2",
+				"reference": "027395c638637de95c8e9fad49a7c51249404ed2",
+				"shasum": ""
+			},
+			"require": {
+				"nette/utils": "^4.0"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.0-dev"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"filesystem",
+				"glob",
+				"iterator",
+				"nette"
+			],
+			"support": {
+				"issues": "https://github.com/nette/finder/issues",
+				"source": "https://github.com/nette/finder/tree/v3.0.0"
+			},
+			"time": "2022-12-14T17:05:54+00:00"
+		},
+		{
+			"name": "nette/http",
+			"version": "v3.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/http.git",
+				"reference": "75c6bb9b6edabef924862bcc17e73eed2b13f873"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/http/zipball/75c6bb9b6edabef924862bcc17e73eed2b13f873",
+				"reference": "75c6bb9b6edabef924862bcc17e73eed2b13f873",
+				"shasum": ""
+			},
+			"require": {
+				"nette/utils": "^3.2.1 || ~4.0.0",
+				"php": ">=7.2 <8.3"
+			},
+			"conflict": {
+				"nette/di": "<3.0.3",
+				"nette/schema": "<1.2"
+			},
+			"require-dev": {
+				"nette/di": "^3.0",
+				"nette/security": "^3.0",
+				"nette/tester": "^2.4",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.8"
+			},
+			"suggest": {
+				"ext-fileinfo": "to detect type of uploaded files"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.2-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🌐 Nette Http: abstraction for HTTP request, response and session. Provides careful data sanitization and utility for URL and cookies manipulation.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"cookies",
+				"http",
+				"nette",
+				"proxy",
+				"request",
+				"response",
+				"security",
+				"session",
+				"url"
+			],
+			"support": {
+				"issues": "https://github.com/nette/http/issues",
+				"source": "https://github.com/nette/http/tree/v3.2"
+			},
+			"time": "2023-03-20T13:15:15+00:00"
+		},
+		{
+			"name": "nette/neon",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/neon.git",
+				"reference": "d016eb143f513873043d9d4d645d2d02d3afab1f"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/neon/zipball/d016eb143f513873043d9d4d645d2d02d3afab1f",
+				"reference": "d016eb143f513873043d9d4d645d2d02d3afab1f",
+				"shasum": ""
+			},
+			"require": {
+				"ext-json": "*",
+				"php": ">=8.0 <8.3"
+			},
+			"require-dev": {
+				"nette/tester": "^2.4",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.7"
+			},
+			"default-branch": true,
+			"bin": [
+				"bin/neon-lint"
+			],
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.4-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+			"homepage": "https://ne-on.org",
+			"keywords": [
+				"export",
+				"import",
+				"neon",
+				"nette",
+				"yaml"
+			],
+			"support": {
+				"issues": "https://github.com/nette/neon/issues",
+				"source": "https://github.com/nette/neon/tree/master"
+			},
+			"time": "2023-02-06T19:24:05+00:00"
+		},
+		{
+			"name": "nette/php-generator",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/php-generator.git",
+				"reference": "b2aebf0903a3ae0a97b391e301a1f98d6aec2a26"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/php-generator/zipball/b2aebf0903a3ae0a97b391e301a1f98d6aec2a26",
+				"reference": "b2aebf0903a3ae0a97b391e301a1f98d6aec2a26",
+				"shasum": ""
+			},
+			"require": {
+				"nette/utils": "^3.2.9 || ^4.0",
+				"php": ">=8.0 <8.3"
+			},
+			"require-dev": {
+				"jetbrains/phpstorm-attributes": "dev-master",
+				"nette/tester": "^2.4",
+				"nikic/php-parser": "^4.15",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.8"
+			},
+			"suggest": {
+				"nikic/php-parser": "to use ClassType::from(withBodies: true) & ClassType::fromCode()"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "4.0-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 8.2 features.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"code",
+				"nette",
+				"php",
+				"scaffolding"
+			],
+			"support": {
+				"issues": "https://github.com/nette/php-generator/issues",
+				"source": "https://github.com/nette/php-generator/tree/master"
+			},
+			"time": "2023-05-22T12:07:33+00:00"
+		},
+		{
+			"name": "nette/robot-loader",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/robot-loader.git",
+				"reference": "2970fc5a7ba858d996801df3af68005ca51f26a9"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/robot-loader/zipball/2970fc5a7ba858d996801df3af68005ca51f26a9",
+				"reference": "2970fc5a7ba858d996801df3af68005ca51f26a9",
+				"shasum": ""
+			},
+			"require": {
+				"ext-tokenizer": "*",
+				"nette/utils": "^4.0",
+				"php": ">=8.0 <8.3"
+			},
+			"require-dev": {
+				"nette/tester": "^2.4",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.9"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "4.0-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"autoload",
+				"class",
+				"interface",
+				"nette",
+				"trait"
+			],
+			"support": {
+				"issues": "https://github.com/nette/robot-loader/issues",
+				"source": "https://github.com/nette/robot-loader/tree/v4.0.0"
+			},
+			"time": "2023-01-18T04:17:49+00:00"
+		},
+		{
+			"name": "nette/schema",
+			"version": "v1.2.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/schema.git",
+				"reference": "b6b3f41ea96ebf082657d271d9b1bac6071d7d29"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/schema/zipball/b6b3f41ea96ebf082657d271d9b1bac6071d7d29",
+				"reference": "b6b3f41ea96ebf082657d271d9b1bac6071d7d29",
+				"shasum": ""
+			},
+			"require": {
+				"nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0",
+				"php": ">=7.1 <8.3"
+			},
+			"require-dev": {
+				"nette/tester": "^2.3 || ^2.4",
+				"phpstan/phpstan-nette": "^1.0",
+				"tracy/tracy": "^2.7"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "1.2-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "📐 Nette Schema: validating data structures against a given Schema.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"config",
+				"nette"
+			],
+			"support": {
+				"issues": "https://github.com/nette/schema/issues",
+				"source": "https://github.com/nette/schema/tree/v1.2"
+			},
+			"time": "2022-12-21T00:59:21+00:00"
+		},
+		{
+			"name": "nette/utils",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/utils.git",
+				"reference": "0a94bd77ff1775e039aa4416abc9807d12c198ba"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/utils/zipball/0a94bd77ff1775e039aa4416abc9807d12c198ba",
+				"reference": "0a94bd77ff1775e039aa4416abc9807d12c198ba",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=8.0 <8.3"
+			},
+			"conflict": {
+				"nette/finder": "<3",
+				"nette/schema": "<1.2.2"
+			},
+			"require-dev": {
+				"jetbrains/phpstorm-attributes": "dev-master",
+				"nette/tester": "^2.5",
+				"phpstan/phpstan": "^1.0",
+				"tracy/tracy": "^2.9"
+			},
+			"suggest": {
+				"ext-gd": "to use Image",
+				"ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+				"ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+				"ext-json": "to use Nette\\Utils\\Json",
+				"ext-mbstring": "to use Strings::lower() etc...",
+				"ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+				"ext-xml": "to use Strings::length() etc. when mbstring is not available"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "4.0-dev"
+				}
+			},
+			"autoload": {
+				"classmap": [
+					"src/"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause",
+				"GPL-2.0-only",
+				"GPL-3.0-only"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+			"homepage": "https://nette.org",
+			"keywords": [
+				"array",
+				"core",
+				"datetime",
+				"images",
+				"json",
+				"nette",
+				"paginator",
+				"password",
+				"slugify",
+				"string",
+				"unicode",
+				"utf-8",
+				"utility",
+				"validation"
+			],
+			"support": {
+				"issues": "https://github.com/nette/utils/issues",
+				"source": "https://github.com/nette/utils/tree/master"
+			},
+			"time": "2023-04-07T14:16:07+00:00"
+		},
+		{
+			"name": "phpoption/phpoption",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/schmittjoh/php-option.git",
+				"reference": "dd3a383e599f49777d8b628dadbb90cae435b87e"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dd3a383e599f49777d8b628dadbb90cae435b87e",
+				"reference": "dd3a383e599f49777d8b628dadbb90cae435b87e",
+				"shasum": ""
+			},
+			"require": {
+				"php": "^7.2.5 || ^8.0"
+			},
+			"require-dev": {
+				"bamarni/composer-bin-plugin": "^1.8.2",
+				"phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"bamarni-bin": {
+					"bin-links": true,
+					"forward-command": true
+				},
+				"branch-alias": {
+					"dev-master": "1.9-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"PhpOption\\": "src/PhpOption/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"Apache-2.0"
+			],
+			"authors": [
+				{
+					"name": "Johannes M. Schmitt",
+					"email": "schmittjoh@gmail.com",
+					"homepage": "https://github.com/schmittjoh"
+				},
+				{
+					"name": "Graham Campbell",
+					"email": "hello@gjcampbell.co.uk",
+					"homepage": "https://github.com/GrahamCampbell"
+				}
+			],
+			"description": "Option Type for PHP",
+			"keywords": [
+				"language",
+				"option",
+				"php",
+				"type"
+			],
+			"support": {
+				"issues": "https://github.com/schmittjoh/php-option/issues",
+				"source": "https://github.com/schmittjoh/php-option/tree/1.9.1"
+			},
+			"funding": [
+				{
+					"url": "https://github.com/GrahamCampbell",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
+					"type": "tidelift"
+				}
+			],
+			"time": "2023-02-25T19:38:58+00:00"
+		},
+		{
+			"name": "psr/http-message",
+			"version": "1.1",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/php-fig/http-message.git",
+				"reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+				"reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+				"shasum": ""
+			},
+			"require": {
+				"php": "^7.2 || ^8.0"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "1.1.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Psr\\Http\\Message\\": "src/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "PHP-FIG",
+					"homepage": "http://www.php-fig.org/"
+				}
+			],
+			"description": "Common interface for HTTP messages",
+			"homepage": "https://github.com/php-fig/http-message",
+			"keywords": [
+				"http",
+				"http-message",
+				"psr",
+				"psr-7",
+				"request",
+				"response"
+			],
+			"support": {
+				"source": "https://github.com/php-fig/http-message/tree/1.1"
+			},
+			"time": "2023-04-04T09:50:52+00:00"
+		},
+		{
+			"name": "psr/log",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/php-fig/log.git",
+				"reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
+				"reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=8.0.0"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "3.x-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Psr\\Log\\": "src"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "PHP-FIG",
+					"homepage": "https://www.php-fig.org/"
+				}
+			],
+			"description": "Common interface for logging libraries",
+			"homepage": "https://github.com/php-fig/log",
+			"keywords": [
+				"log",
+				"psr",
+				"psr-3"
+			],
+			"support": {
+				"source": "https://github.com/php-fig/log/tree/3.0.0"
+			},
+			"time": "2021-07-14T16:46:02+00:00"
+		},
+		{
+			"name": "symfony/polyfill-ctype",
+			"version": "dev-main",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/symfony/polyfill-ctype.git",
+				"reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
+				"reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=7.1"
+			},
+			"provide": {
+				"ext-ctype": "*"
+			},
+			"suggest": {
+				"ext-ctype": "For best performance"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-main": "1.28-dev"
+				},
+				"thanks": {
+					"name": "symfony/polyfill",
+					"url": "https://github.com/symfony/polyfill"
+				}
+			},
+			"autoload": {
+				"files": [
+					"bootstrap.php"
+				],
+				"psr-4": {
+					"Symfony\\Polyfill\\Ctype\\": ""
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Gert de Pagter",
+					"email": "BackEndTea@gmail.com"
+				},
+				{
+					"name": "Symfony Community",
+					"homepage": "https://symfony.com/contributors"
+				}
+			],
+			"description": "Symfony polyfill for ctype functions",
+			"homepage": "https://symfony.com",
+			"keywords": [
+				"compatibility",
+				"ctype",
+				"polyfill",
+				"portable"
+			],
+			"support": {
+				"source": "https://github.com/symfony/polyfill-ctype/tree/main"
+			},
+			"funding": [
+				{
+					"url": "https://symfony.com/sponsor",
+					"type": "custom"
+				},
+				{
+					"url": "https://github.com/fabpot",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+					"type": "tidelift"
+				}
+			],
+			"time": "2023-01-26T09:26:14+00:00"
+		},
+		{
+			"name": "symfony/polyfill-mbstring",
+			"version": "dev-main",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/symfony/polyfill-mbstring.git",
+				"reference": "f9c7affe77a00ae32ca127ca6833d034e6d33f25"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f9c7affe77a00ae32ca127ca6833d034e6d33f25",
+				"reference": "f9c7affe77a00ae32ca127ca6833d034e6d33f25",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=7.1"
+			},
+			"provide": {
+				"ext-mbstring": "*"
+			},
+			"suggest": {
+				"ext-mbstring": "For best performance"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-main": "1.28-dev"
+				},
+				"thanks": {
+					"name": "symfony/polyfill",
+					"url": "https://github.com/symfony/polyfill"
+				}
+			},
+			"autoload": {
+				"files": [
+					"bootstrap.php"
+				],
+				"psr-4": {
+					"Symfony\\Polyfill\\Mbstring\\": ""
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Nicolas Grekas",
+					"email": "p@tchwork.com"
+				},
+				{
+					"name": "Symfony Community",
+					"homepage": "https://symfony.com/contributors"
+				}
+			],
+			"description": "Symfony polyfill for the Mbstring extension",
+			"homepage": "https://symfony.com",
+			"keywords": [
+				"compatibility",
+				"mbstring",
+				"polyfill",
+				"portable",
+				"shim"
+			],
+			"support": {
+				"source": "https://github.com/symfony/polyfill-mbstring/tree/main"
+			},
+			"funding": [
+				{
+					"url": "https://symfony.com/sponsor",
+					"type": "custom"
+				},
+				{
+					"url": "https://github.com/fabpot",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+					"type": "tidelift"
+				}
+			],
+			"time": "2023-01-30T17:25:47+00:00"
+		},
+		{
+			"name": "symfony/polyfill-php80",
+			"version": "dev-main",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/symfony/polyfill-php80.git",
+				"reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+				"reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+				"shasum": ""
+			},
+			"require": {
+				"php": ">=7.1"
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-main": "1.28-dev"
+				},
+				"thanks": {
+					"name": "symfony/polyfill",
+					"url": "https://github.com/symfony/polyfill"
+				}
+			},
+			"autoload": {
+				"files": [
+					"bootstrap.php"
+				],
+				"psr-4": {
+					"Symfony\\Polyfill\\Php80\\": ""
+				},
+				"classmap": [
+					"Resources/stubs"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"MIT"
+			],
+			"authors": [
+				{
+					"name": "Ion Bazan",
+					"email": "ion.bazan@gmail.com"
+				},
+				{
+					"name": "Nicolas Grekas",
+					"email": "p@tchwork.com"
+				},
+				{
+					"name": "Symfony Community",
+					"homepage": "https://symfony.com/contributors"
+				}
+			],
+			"description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+			"homepage": "https://symfony.com",
+			"keywords": [
+				"compatibility",
+				"polyfill",
+				"portable",
+				"shim"
+			],
+			"support": {
+				"source": "https://github.com/symfony/polyfill-php80/tree/main"
+			},
+			"funding": [
+				{
+					"url": "https://symfony.com/sponsor",
+					"type": "custom"
+				},
+				{
+					"url": "https://github.com/fabpot",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+					"type": "tidelift"
+				}
+			],
+			"time": "2023-01-26T09:26:14+00:00"
+		},
+		{
+			"name": "tracy/tracy",
+			"version": "v2.10.x-dev",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/nette/tracy.git",
+				"reference": "8585db57a61216eb03bfa535ad318ab41c4f721c"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/nette/tracy/zipball/8585db57a61216eb03bfa535ad318ab41c4f721c",
+				"reference": "8585db57a61216eb03bfa535ad318ab41c4f721c",
+				"shasum": ""
+			},
+			"require": {
+				"ext-json": "*",
+				"ext-session": "*",
+				"php": ">=8.0 <8.3"
+			},
+			"conflict": {
+				"nette/di": "<3.0"
+			},
+			"require-dev": {
+				"latte/latte": "^2.5",
+				"nette/di": "^3.0",
+				"nette/http": "^3.0",
+				"nette/mail": "^3.0",
+				"nette/tester": "^2.2",
+				"nette/utils": "^3.0",
+				"phpstan/phpstan": "^1.0",
+				"psr/log": "^1.0 || ^2.0 || ^3.0"
+			},
+			"type": "library",
+			"extra": {
+				"branch-alias": {
+					"dev-master": "2.10-dev"
+				}
+			},
+			"autoload": {
+				"files": [
+					"src/Tracy/functions.php"
+				],
+				"classmap": [
+					"src"
+				]
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause"
+			],
+			"authors": [
+				{
+					"name": "David Grudl",
+					"homepage": "https://davidgrudl.com"
+				},
+				{
+					"name": "Nette Community",
+					"homepage": "https://nette.org/contributors"
+				}
+			],
+			"description": "😎  Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
+			"homepage": "https://tracy.nette.org",
+			"keywords": [
+				"Xdebug",
+				"debug",
+				"debugger",
+				"nette",
+				"profiler"
+			],
+			"support": {
+				"issues": "https://github.com/nette/tracy/issues",
+				"source": "https://github.com/nette/tracy/tree/v2.10"
+			},
+			"time": "2023-06-20T13:39:19+00:00"
+		},
+		{
+			"name": "vlucas/phpdotenv",
+			"version": "dev-master",
+			"source": {
+				"type": "git",
+				"url": "https://github.com/vlucas/phpdotenv.git",
+				"reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7"
+			},
+			"dist": {
+				"type": "zip",
+				"url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
+				"reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
+				"shasum": ""
+			},
+			"require": {
+				"ext-pcre": "*",
+				"graham-campbell/result-type": "^1.0.2",
+				"php": "^7.1.3 || ^8.0",
+				"phpoption/phpoption": "^1.8",
+				"symfony/polyfill-ctype": "^1.23",
+				"symfony/polyfill-mbstring": "^1.23.1",
+				"symfony/polyfill-php80": "^1.23.1"
+			},
+			"require-dev": {
+				"bamarni/composer-bin-plugin": "^1.4.1",
+				"ext-filter": "*",
+				"phpunit/phpunit": "^7.5.20 || ^8.5.30 || ^9.5.25"
+			},
+			"suggest": {
+				"ext-filter": "Required to use the boolean validator."
+			},
+			"default-branch": true,
+			"type": "library",
+			"extra": {
+				"bamarni-bin": {
+					"bin-links": true,
+					"forward-command": true
+				},
+				"branch-alias": {
+					"dev-master": "5.5-dev"
+				}
+			},
+			"autoload": {
+				"psr-4": {
+					"Dotenv\\": "src/"
+				}
+			},
+			"notification-url": "https://packagist.org/downloads/",
+			"license": [
+				"BSD-3-Clause"
+			],
+			"authors": [
+				{
+					"name": "Graham Campbell",
+					"email": "hello@gjcampbell.co.uk",
+					"homepage": "https://github.com/GrahamCampbell"
+				},
+				{
+					"name": "Vance Lucas",
+					"email": "vance@vancelucas.com",
+					"homepage": "https://github.com/vlucas"
+				}
+			],
+			"description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+			"keywords": [
+				"dotenv",
+				"env",
+				"environment"
+			],
+			"support": {
+				"issues": "https://github.com/vlucas/phpdotenv/issues",
+				"source": "https://github.com/vlucas/phpdotenv/tree/v5.5.0"
+			},
+			"funding": [
+				{
+					"url": "https://github.com/GrahamCampbell",
+					"type": "github"
+				},
+				{
+					"url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+					"type": "tidelift"
+				}
+			],
+			"time": "2022-10-16T01:01:54+00:00"
+		}
+	],
+	"packages-dev": [],
+	"aliases": [],
+	"minimum-stability": "dev",
+	"stability-flags": [],
+	"prefer-stable": false,
+	"prefer-lowest": false,
+	"platform": [],
+	"platform-dev": [],
+	"plugin-api-version": "2.3.0"
+}
