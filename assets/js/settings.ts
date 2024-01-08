@@ -1,5 +1,5 @@
 import {startLoading, stopLoading} from "../../../../assets/js/loaders";
-import axios from "axios";
+import {deleteTable} from "./api/settings";
 
 window.addEventListener('load', () => {
 	const tables = document.querySelectorAll('.table-item') as NodeListOf<HTMLDivElement>;
@@ -11,12 +11,13 @@ window.addEventListener('load', () => {
 
 		deleteBtn.addEventListener('click', () => {
 			startLoading();
-			axios.delete(`/settings/tables/${id}`)
+            deleteTable(id)
 				.then(() => {
 					stopLoading(true);
 					table.remove();
 				})
 				.catch(error => {
+                    console.error(error);
 					stopLoading(false);
 				})
 		});
