@@ -4,7 +4,7 @@ namespace LAC\Modules\Tables\Controllers;
 
 use JsonException;
 use LAC\Modules\Tables\Models\Table;
-use Lsr\Core\Controller;
+use Lsr\Core\Controllers\Controller;
 use Lsr\Core\Exceptions\ValidationException;
 
 class TablesController extends Controller

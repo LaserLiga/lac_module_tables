@@ -19,16 +19,16 @@ class ResultParserExtension implements ResultParserExtensionInterface
 				$game->table = $table;
 				if (!isset($table->group)) {
 					// Assign a group to the table if it doesn't have any
-					if (isset($game->group)) {
+					if ($game->getGroup() !== null) {
 						// Copy group from game
-						$table->group = $game->group;
+						$table->group = $game->getGroup();
 					}
 					else {
 						// Create a new group for the table
 						$game->group = $table->createGroup(date: $game->start);
 					}
 				}
-				else if (!isset($game->group)) {
+				else if ($game->getGroup() === null) {
 					$game->group = $table->group;
 				}
 			} catch (ModelNotFoundException) {

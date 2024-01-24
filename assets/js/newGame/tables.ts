@@ -2,7 +2,7 @@ import NewGameGroup from "../../../../../assets/js/pages/newGame/groups";
 import {startLoading, stopLoading} from "../../../../../assets/js/loaders";
 import {TableData} from "./interfaces";
 import {lang} from "../../../../../assets/js/includes/functions";
-import {GameGroupData} from "../../../../../assets/js/interfaces/gameInterfaces";
+import {GameGroupDataBase} from "../../../../../assets/js/interfaces/gameInterfaces";
 import {cleanTable, getTable, getTables} from "../api/tables";
 
 export default class NewGameTables {
@@ -28,7 +28,7 @@ export default class NewGameTables {
             this.updateTables();
         });
 
-        document.addEventListener('game-group-loaded', (e: CustomEvent<GameGroupData>) => {
+        document.addEventListener('game-group-loaded', (e: CustomEvent<GameGroupDataBase>) => {
             console.log(e, this.groupMap.entries());
             const id = this.groupMap.get(e.detail.id);
             if (id) {
@@ -36,7 +36,7 @@ export default class NewGameTables {
             }
         });
 
-        document.addEventListener('game-group-selected', (e: CustomEvent<GameGroupData>) => {
+        document.addEventListener('game-group-selected', (e: CustomEvent<GameGroupDataBase>) => {
             console.log(e, this.groupMap.entries());
             const id = this.groupMap.get(e.detail.id);
             if (id) {
@@ -44,7 +44,7 @@ export default class NewGameTables {
             }
         });
 
-        document.addEventListener('game-group-import', (e: CustomEvent<GameGroupData>) => {
+        document.addEventListener('game-group-import', (e: CustomEvent<GameGroupDataBase>) => {
             console.log(e, this.groupMap.entries());
             const id = this.groupMap.get(e.detail.id);
             if (id) {
