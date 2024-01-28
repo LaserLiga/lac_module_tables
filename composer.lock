@@ -405,16 +405,16 @@
 		},
 		{
 			"name": "lsr/core",
-      "version": "0.2.30",
+      "version": "0.2.35",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-core.git",
-        "reference": "25813879d6bdf460084afc0a343995537fc370d3"
+        "reference": "2277e095a1504cfbd7a6a72ff4ac73837cb5a714"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-core/zipball/25813879d6bdf460084afc0a343995537fc370d3",
-        "reference": "25813879d6bdf460084afc0a343995537fc370d3",
+        "url": "https://api.github.com/repos/Heroyt/lsr-core/zipball/2277e095a1504cfbd7a6a72ff4ac73837cb5a714",
+        "reference": "2277e095a1504cfbd7a6a72ff4ac73837cb5a714",
 				"shasum": ""
 			},
 			"require": {
@@ -424,6 +424,7 @@
 				"ext-gettext": "*",
 				"ext-mbstring": "*",
 				"ext-pdo_sqlite": "*",
+        "ext-redis": "*",
 				"ext-simplexml": "*",
 				"ext-zip": "*",
 				"latte/latte": "^3.0",
@@ -477,10 +478,10 @@
 			],
 			"description": "Laser framework core.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-core/tree/v0.2.30",
+        "source": "https://github.com/Heroyt/lsr-core/tree/v0.2.35",
 				"issues": "https://github.com/Heroyt/lsr-core/issues"
 			},
-      "time": "2024-01-22T17:35:47+00:00"
+      "time": "2024-01-27T15:16:14+00:00"
 		},
 		{
 			"name": "lsr/helpers",
@@ -648,16 +649,16 @@
 		},
 		{
 			"name": "lsr/request",
-      "version": "0.2.5",
+      "version": "0.2.7",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-requests.git",
-        "reference": "a01c537e6c54639530c73f3919277cdc9cefc440"
+        "reference": "4ed17d69edff32a25962a9838fba9656dbdade72"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-requests/zipball/a01c537e6c54639530c73f3919277cdc9cefc440",
-        "reference": "a01c537e6c54639530c73f3919277cdc9cefc440",
+        "url": "https://api.github.com/repos/Heroyt/lsr-requests/zipball/4ed17d69edff32a25962a9838fba9656dbdade72",
+        "reference": "4ed17d69edff32a25962a9838fba9656dbdade72",
 				"shasum": ""
 			},
 			"require": {
@@ -665,7 +666,7 @@
 				"lsr/interfaces": "^0.2",
 				"lsr/routing": "^0.2",
 				"php": ">=8.1",
-				"psr/http-message": "^1"
+        "psr/http-message": "^2"
 			},
 			"require-dev": {
 				"phpstan/phpstan": "^1.8",
@@ -691,10 +692,10 @@
 			],
 			"description": "Laser framework core - Requests.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-requests/tree/v0.2.5",
+        "source": "https://github.com/Heroyt/lsr-requests/tree/v0.2.7",
 				"issues": "https://github.com/Heroyt/lsr-requests/issues"
 			},
-      "time": "2024-01-09T13:36:27+00:00"
+      "time": "2024-01-27T19:46:55+00:00"
 		},
 		{
 			"name": "lsr/routing",
@@ -702,12 +703,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-routing.git",
-        "reference": "8700d3f6a36f12bea824720e0eb947b963bdcb96"
+        "reference": "3edcaaa828811f8f380e62fbf0aef01322c788c8"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-routing/zipball/8700d3f6a36f12bea824720e0eb947b963bdcb96",
-        "reference": "8700d3f6a36f12bea824720e0eb947b963bdcb96",
+        "url": "https://api.github.com/repos/Heroyt/lsr-routing/zipball/3edcaaa828811f8f380e62fbf0aef01322c788c8",
+        "reference": "3edcaaa828811f8f380e62fbf0aef01322c788c8",
 				"shasum": ""
 			},
 			"require": {
@@ -748,10 +749,10 @@
 			],
 			"description": "Laser framework core - Routing.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-routing/tree/v0.2.7",
+        "source": "https://github.com/Heroyt/lsr-routing/tree/v0.2.9",
 				"issues": "https://github.com/Heroyt/lsr-routing/issues"
 			},
-      "time": "2023-07-16T11:17:48+00:00"
+      "time": "2024-01-27T15:14:33+00:00"
 		},
 		{
 			"name": "nette/caching",
@@ -1464,25 +1465,26 @@
 		},
 		{
 			"name": "psr/http-message",
-			"version": "1.1",
+      "version": "dev-master",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/php-fig/http-message.git",
-				"reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+        "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
-				"reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+        "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+        "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
 				"shasum": ""
 			},
 			"require": {
 				"php": "^7.2 || ^8.0"
 			},
+      "default-branch": true,
 			"type": "library",
 			"extra": {
 				"branch-alias": {
-					"dev-master": "1.1.x-dev"
+          "dev-master": "2.0.x-dev"
 				}
 			},
 			"autoload": {
@@ -1497,7 +1499,7 @@
 			"authors": [
 				{
 					"name": "PHP-FIG",
-					"homepage": "http://www.php-fig.org/"
+          "homepage": "https://www.php-fig.org/"
 				}
 			],
 			"description": "Common interface for HTTP messages",
@@ -1511,9 +1513,9 @@
 				"response"
 			],
 			"support": {
-				"source": "https://github.com/php-fig/http-message/tree/1.1"
+        "source": "https://github.com/php-fig/http-message/tree/2.0"
 			},
-			"time": "2023-04-04T09:50:52+00:00"
+      "time": "2023-04-04T09:54:51+00:00"
 		},
 		{
 			"name": "psr/log",
