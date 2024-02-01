@@ -1,18 +1,17 @@
-import NewGameGroup from "../../../../../assets/js/pages/newGame/groups";
-import {startLoading, stopLoading} from "../../../../../assets/js/loaders";
 import {TableData} from "./interfaces";
-import {lang} from "../../../../../assets/js/includes/functions";
 import {GameGroupDataBase} from "../../../../../assets/js/interfaces/gameInterfaces";
 import {cleanTable, getTable, getTables} from "../api/tables";
+import {lang} from "../../../../../assets/js/includes/frameworkFunctions";
+import {NewGameGroupInterface} from "../../../../../assets/js/interfaces/groups";
 
 export default class NewGameTables {
 
-    groups: NewGameGroup;
+    groups: NewGameGroupInterface;
     gameTablesSelect: HTMLSelectElement;
 
     groupMap: Map<number, number> = new Map;
 
-    constructor(groups: NewGameGroup, gameTablesSelect: HTMLSelectElement) {
+    constructor(groups: NewGameGroupInterface, gameTablesSelect: HTMLSelectElement) {
         this.groups = groups;
         this.gameTablesSelect = gameTablesSelect;
 
@@ -73,14 +72,14 @@ export default class NewGameTables {
         });
 
         cleanBtn.addEventListener('click', () => {
-            startLoading();
+            document.dispatchEvent(new CustomEvent('loading.start'));
             cleanTable(id)
                 .then(() => {
                     this.updateTable(id);
-                    stopLoading();
+                    document.dispatchEvent(new CustomEvent('loading.stop'));
                 })
                 .catch(() => {
-                    stopLoading(false);
+                    document.dispatchEvent(new CustomEvent('loading.error'));
                 })
         });
 
@@ -100,10 +99,10 @@ export default class NewGameTables {
             let groupDom = this.groups.gameGroupsWrapper.querySelector(`.game-group[data-id="${groupId}"]`) as HTMLDivElement;
             if (!groupDom) {
                 // Load group if it doesn't exist (for example if it's disabled)
-                startLoading(true);
+                document.dispatchEvent(new CustomEvent('loading.small.start'));
                 await this.groups.loadGroup(groupId);
                 groupDom = this.groups.gameGroupsWrapper.querySelector(`.game-group[data-id="${groupId}"]`) as HTMLDivElement;
-                stopLoading(true, true);
+                document.dispatchEvent(new CustomEvent('loading.small.stop'));
             }
             // Dispatch a click event on the loadPlayers btn
             groupDom.querySelector('.loadPlayers').dispatchEvent(new Event('click', {bubbles: true}));

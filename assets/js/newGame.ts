@@ -1,4 +1,4 @@
-import NewGameGroup from "../../../../assets/js/pages/newGame/groups";
+import {NewGameGroupInterface} from "../../../../assets/js/interfaces/groups";
 
 window.addEventListener('load', () => {
 	const gameTablesSelect = document.getElementById('table-select') as HTMLSelectElement | undefined;
@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 		}
 	});
 
-	document.addEventListener('groups-module-loaded', (e: CustomEvent<NewGameGroup>) => {
+    document.addEventListener('groups-module-loaded', (e: CustomEvent<NewGameGroupInterface>) => {
 		console.log(e);
 		import(
 			/* webpackChunkName: "newGame_tables" */
