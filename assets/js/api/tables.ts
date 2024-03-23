@@ -1,16 +1,16 @@
-import {fetchGet, FormSaveResponse} from "../../../../../assets/js/includes/apiClient";
+import {ErrorResponse, fetchGet, fetchPost} from "../../../../../assets/js/includes/apiClient";
 import {TableData} from "../newGame/interfaces";
 
 export type TablesResponse = { tables: TableData[] }
 
 export async function getTables(): Promise<TablesResponse> {
-    return fetchGet('/tables');
+    return fetchGet('/tables', null, {Accept: 'application/json'});
 }
 
 export async function getTable(id: number): Promise<TableData> {
-    return fetchGet(`/tables/${id}`);
+    return fetchGet(`/tables/${id}`, null, {Accept: 'application/json'});
 }
 
-export async function cleanTable(id: number): Promise<FormSaveResponse> {
-    return fetchGet(`/tables/${id}/clean`);
+export async function cleanTable(id: number): Promise<'' | ErrorResponse> {
+    return fetchPost(`/tables/${id}/clean`, null, {Accept: 'application/json'});
 }

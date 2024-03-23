@@ -2,6 +2,7 @@
 
 namespace LAC\Modules\Tables\Controllers;
 
+use App\Api\Response\ErrorDto;
 use App\Core\App;
 use JsonException;
 use LAC\Modules\Tables\Models\Table;
@@ -11,6 +12,7 @@ use Lsr\Core\Exceptions\ValidationException;
 use Lsr\Core\Requests\Request;
 use Lsr\Exceptions\TemplateDoesNotExistException;
 use Lsr\Logging\Exceptions\DirectoryCreationException;
+use Psr\Http\Message\ResponseInterface;
 
 class SettingsController extends Controller
 {
@@ -19,7 +21,7 @@ class SettingsController extends Controller
 	 * @throws ValidationException
 	 * @throws TemplateDoesNotExistException
 	 */
-	public function tables(): void {
+	public function tables(): ResponseInterface {
 		$this->params['addJs'] = ['modules/tables/settings.js'];
 		$this->params['tables'] = Table::getAll();
 		$this->params['cols'] = 1;
@@ -34,7 +36,7 @@ class SettingsController extends Controller
 				$this->params['rows'] = $endRow;
 			}
 		}
-		$this->view('../modules/Tables/templates/settings');
+		return $this->view('../modules/Tables/templates/settings');
 	}
 
 	/**
@@ -43,22 +45,22 @@ class SettingsController extends Controller
 	 * @throws JsonException
 	 * @throws ValidationException
 	 */
-	public function addTable(Request $request): never {
+	public function addTable(Request $request): ResponseInterface {
 		$table = new Table();
 		$table->name = lang('Stůl');
 		if (!$table->save()) {
 			if ($request->isAjax()) {
-				$this->respond(['error' => 'Failed to create the table'], 500);
+				$this->respond(new ErrorDto('Failed to create the table'), 500);
 			}
 			$request->passErrors[] = lang('Nepodařilo se vytvořit objekt', context: 'errors');
-			App::redirect(['settings', 'tables'], $request);
+			return App::redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
-			$this->respond(['status' => 'ok']);
+			return $this->respond('');
 		}
 		$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně vytvořeno')];
-		App::redirect(['settings', 'tables'], $request);
+		return App::redirect(['settings', 'tables'], $request);
 	}
 
 	/**
@@ -67,25 +69,25 @@ class SettingsController extends Controller
 	 * @return never
 	 * @throws JsonException
 	 */
-	public function deleteTable(Table $table, Request $request): never {
+	public function deleteTable(Table $table, Request $request): ResponseInterface {
 		if (!$table->delete()) {
 			if ($request->isAjax()) {
-				$this->respond(['error' => 'Failed to delete the table'], 500);
+				return $this->respond(new ErrorDto('Failed to delete the table'), 500);
 			}
 			$request->passErrors[] = lang('Nepodařilo se smazat objekt', context: 'errors');
-			App::redirect(['settings', 'tables'], $request);
+			return App::redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
-			$this->respond(['status' => 'ok']);
+			return $this->respond('');
 		}
 		$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně smazáno')];
-		App::redirect(['settings', 'tables'], $request);
+		return App::redirect(['settings', 'tables'], $request);
 	}
 
-	public function saveTables(Request $request): never {
+	public function saveTables(Request $request): ResponseInterface {
 		/** @var array<numeric, array{name:string,grid_col?:numeric,grid_row?:numeric,grid_width?:numeric,grid_height?:numeric}> $tables */
-		$tables = $request->post['table'] ?? [];
+		$tables = $request->getPost('table', []);
 		foreach ($tables as $id => $tableInfo) {
 			try {
 				$table = Table::get((int)$id);
@@ -109,17 +111,17 @@ class SettingsController extends Controller
 
 		if (empty($request->errors)) {
 			if ($request->isAjax()) {
-				$this->respond(['status' => 'ok']);
+				return $this->respond('');
 			}
 			$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně uloženo')];
-			App::redirect(['settings', 'tables'], $request);
+			return App::redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
-			$this->respond(['errors' => $request->errors], 500);
+			return $this->respond(new ErrorDto('An error has occured', values: ['errors' => $request->errors]), 500);
 		}
 
 		$request->passErrors = $request->errors;
-		App::redirect(['settings', 'tables'], $request);
+		return App::redirect(['settings', 'tables'], $request);
 	}
 }

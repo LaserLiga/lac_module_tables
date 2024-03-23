@@ -323,12 +323,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/latte.git",
-        "reference": "8f61d1c5d695a4eb663c63822057d4398a7fdd43"
+        "reference": "1ab054b1af13ee647ccbc5bf2673a3483a7457d5"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/latte/zipball/8f61d1c5d695a4eb663c63822057d4398a7fdd43",
-        "reference": "8f61d1c5d695a4eb663c63822057d4398a7fdd43",
+        "url": "https://api.github.com/repos/nette/latte/zipball/1ab054b1af13ee647ccbc5bf2673a3483a7457d5",
+        "reference": "1ab054b1af13ee647ccbc5bf2673a3483a7457d5",
 				"shasum": ""
 			},
 			"require": {
@@ -399,22 +399,22 @@
 			],
 			"support": {
 				"issues": "https://github.com/nette/latte/issues",
-				"source": "https://github.com/nette/latte/tree/master"
+        "source": "https://github.com/nette/latte/tree/v3.0.14"
 			},
-      "time": "2024-01-10T13:45:00+00:00"
+      "time": "2024-03-19T09:03:26+00:00"
 		},
 		{
 			"name": "lsr/core",
-      "version": "0.2.35",
+      "version": "0.2.41",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-core.git",
-        "reference": "2277e095a1504cfbd7a6a72ff4ac73837cb5a714"
+        "reference": "07fcf3fee28450c61e4b76dabef589483ce609b4"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-core/zipball/2277e095a1504cfbd7a6a72ff4ac73837cb5a714",
-        "reference": "2277e095a1504cfbd7a6a72ff4ac73837cb5a714",
+        "url": "https://api.github.com/repos/Heroyt/lsr-core/zipball/07fcf3fee28450c61e4b76dabef589483ce609b4",
+        "reference": "07fcf3fee28450c61e4b76dabef589483ce609b4",
 				"shasum": ""
 			},
 			"require": {
@@ -443,7 +443,7 @@
 				"phpstan/phpstan": "^1.10",
 				"phpstan/phpstan-dibi": "^1.0",
 				"phpstan/phpstan-nette": "^1.2",
-				"phpunit/phpunit": "^10",
+        "phpunit/phpunit": "^11",
 				"roave/security-advisories": "dev-latest"
 			},
 			"type": "library",
@@ -478,10 +478,10 @@
 			],
 			"description": "Laser framework core.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-core/tree/v0.2.35",
+        "source": "https://github.com/Heroyt/lsr-core/tree/v0.2.41",
 				"issues": "https://github.com/Heroyt/lsr-core/issues"
 			},
-      "time": "2024-01-27T15:16:14+00:00"
+      "time": "2024-03-23T16:29:12+00:00"
 		},
 		{
 			"name": "lsr/helpers",
@@ -489,12 +489,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-helpers.git",
-				"reference": "5a17dd115ed58684ccf4ee89b2eeffb822be32f2"
+        "reference": "682316e3a1068a797cbc2c1ba1ec34cb4972fddc"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/Heroyt/lsr-helpers/zipball/5a17dd115ed58684ccf4ee89b2eeffb822be32f2",
-				"reference": "5a17dd115ed58684ccf4ee89b2eeffb822be32f2",
+        "url": "https://api.github.com/repos/Heroyt/lsr-helpers/zipball/682316e3a1068a797cbc2c1ba1ec34cb4972fddc",
+        "reference": "682316e3a1068a797cbc2c1ba1ec34cb4972fddc",
 				"shasum": ""
 			},
 			"require": {
@@ -547,10 +547,10 @@
 			],
 			"description": "Laser framework core - Helpers.",
 			"support": {
-				"source": "https://github.com/Heroyt/lsr-helpers/tree/v0.2.6",
+        "source": "https://github.com/Heroyt/lsr-helpers/tree/v0.2.8",
 				"issues": "https://github.com/Heroyt/lsr-helpers/issues"
 			},
-			"time": "2023-02-26T14:07:02+00:00"
+      "time": "2024-01-28T20:24:27+00:00"
 		},
 		{
 			"name": "lsr/interfaces",
@@ -649,28 +649,30 @@
 		},
 		{
 			"name": "lsr/request",
-      "version": "0.2.7",
+      "version": "0.2.12",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-requests.git",
-        "reference": "4ed17d69edff32a25962a9838fba9656dbdade72"
+        "reference": "181137962cfb0dac2c35187c80ae9291350f08dd"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-requests/zipball/4ed17d69edff32a25962a9838fba9656dbdade72",
-        "reference": "4ed17d69edff32a25962a9838fba9656dbdade72",
+        "url": "https://api.github.com/repos/Heroyt/lsr-requests/zipball/181137962cfb0dac2c35187c80ae9291350f08dd",
+        "reference": "181137962cfb0dac2c35187c80ae9291350f08dd",
 				"shasum": ""
 			},
 			"require": {
 				"lsr/helpers": "^0.2",
 				"lsr/interfaces": "^0.2",
 				"lsr/routing": "^0.2",
+        "nyholm/psr7": "^1.8",
+        "nyholm/psr7-server": "^1.1",
 				"php": ">=8.1",
         "psr/http-message": "^2"
 			},
 			"require-dev": {
-				"phpstan/phpstan": "^1.8",
-				"phpunit/phpunit": "^10",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^11",
 				"roave/security-advisories": "dev-latest"
 			},
 			"type": "library",
@@ -692,10 +694,10 @@
 			],
 			"description": "Laser framework core - Requests.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-requests/tree/v0.2.7",
+        "source": "https://github.com/Heroyt/lsr-requests/tree/v0.2.12",
 				"issues": "https://github.com/Heroyt/lsr-requests/issues"
 			},
-      "time": "2024-01-27T19:46:55+00:00"
+      "time": "2024-03-21T15:32:15+00:00"
 		},
 		{
 			"name": "lsr/routing",
@@ -703,23 +705,25 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/Heroyt/lsr-routing.git",
-        "reference": "3edcaaa828811f8f380e62fbf0aef01322c788c8"
+        "reference": "fba21446634c71c58004d44473e9660155039029"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/Heroyt/lsr-routing/zipball/3edcaaa828811f8f380e62fbf0aef01322c788c8",
-        "reference": "3edcaaa828811f8f380e62fbf0aef01322c788c8",
+        "url": "https://api.github.com/repos/Heroyt/lsr-routing/zipball/fba21446634c71c58004d44473e9660155039029",
+        "reference": "fba21446634c71c58004d44473e9660155039029",
 				"shasum": ""
 			},
 			"require": {
 				"lsr/interfaces": "^0.2",
-				"php": ">=8.1"
+        "php": ">=8.2",
+        "psr/http-server-handler": "^1.0",
+        "psr/http-server-middleware": "^1.0"
 			},
 			"require-dev": {
 				"lsr/core": "^0.2",
 				"lsr/request": "^0.2",
 				"phpstan/phpstan": "^1.8",
-				"phpunit/phpunit": "^10"
+        "phpunit/phpunit": "^11"
 			},
 			"default-branch": true,
 			"type": "library",
@@ -749,28 +753,27 @@
 			],
 			"description": "Laser framework core - Routing.",
 			"support": {
-        "source": "https://github.com/Heroyt/lsr-routing/tree/v0.2.9",
+        "source": "https://github.com/Heroyt/lsr-routing/tree/v0.2.10",
 				"issues": "https://github.com/Heroyt/lsr-routing/issues"
 			},
-      "time": "2024-01-27T15:14:33+00:00"
+      "time": "2024-03-21T15:33:32+00:00"
 		},
 		{
 			"name": "nette/caching",
-      "version": "v3.2.x-dev",
+      "version": "v3.3.x-dev",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/caching.git",
-        "reference": "559874b7189aec399d6eaa884893d75f4c155b4e"
+        "reference": "3053707a892e100e81efb53dc8c294dca5e076d0"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/caching/zipball/559874b7189aec399d6eaa884893d75f4c155b4e",
-        "reference": "559874b7189aec399d6eaa884893d75f4c155b4e",
+        "url": "https://api.github.com/repos/nette/caching/zipball/3053707a892e100e81efb53dc8c294dca5e076d0",
+        "reference": "3053707a892e100e81efb53dc8c294dca5e076d0",
 				"shasum": ""
 			},
 			"require": {
-				"nette/finder": "^2.4 || ^3.0",
-				"nette/utils": "^3.2 || ~4.0.0",
+        "nette/utils": "^4.0",
         "php": "8.0 - 8.3"
       },
       "conflict": {
@@ -789,7 +792,7 @@
 			"type": "library",
 			"extra": {
 				"branch-alias": {
-					"dev-master": "3.2-dev"
+          "dev-master": "3.3-dev"
 				}
 			},
 			"autoload": {
@@ -824,9 +827,9 @@
 			],
 			"support": {
 				"issues": "https://github.com/nette/caching/issues",
-        "source": "https://github.com/nette/caching/tree/v3.2"
+        "source": "https://github.com/nette/caching/tree/v3.3.0-RC"
 			},
-      "time": "2023-12-14T18:54:44+00:00"
+      "time": "2024-03-10T22:07:25+00:00"
 		},
 		{
 			"name": "nette/di",
@@ -834,18 +837,18 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/di.git",
-        "reference": "0380c4258b8dc7966b2784d1b658f443cd82f442"
+        "reference": "73b0cc7b9314aa1d15599da43688db5e1538c3f5"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/di/zipball/0380c4258b8dc7966b2784d1b658f443cd82f442",
-        "reference": "0380c4258b8dc7966b2784d1b658f443cd82f442",
+        "url": "https://api.github.com/repos/nette/di/zipball/73b0cc7b9314aa1d15599da43688db5e1538c3f5",
+        "reference": "73b0cc7b9314aa1d15599da43688db5e1538c3f5",
 				"shasum": ""
 			},
 			"require": {
 				"ext-tokenizer": "*",
 				"nette/neon": "^3.3 || ^4.0",
-        "nette/php-generator": "^4.1.1",
+        "nette/php-generator": "^4.1.3",
 				"nette/robot-loader": "^4.0",
         "nette/schema": "^1.2.5",
 				"nette/utils": "^4.0",
@@ -898,61 +901,7 @@
 				"issues": "https://github.com/nette/di/issues",
 				"source": "https://github.com/nette/di/tree/v3.2"
 			},
-      "time": "2023-12-21T23:39:37+00:00"
-		},
-		{
-			"name": "nette/finder",
-			"version": "dev-master",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/nette/finder.git",
-				"reference": "027395c638637de95c8e9fad49a7c51249404ed2"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/nette/finder/zipball/027395c638637de95c8e9fad49a7c51249404ed2",
-				"reference": "027395c638637de95c8e9fad49a7c51249404ed2",
-				"shasum": ""
-			},
-			"require": {
-				"nette/utils": "^4.0"
-			},
-			"default-branch": true,
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-master": "3.0-dev"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": [
-				"BSD-3-Clause",
-				"GPL-2.0-only",
-				"GPL-3.0-only"
-			],
-			"authors": [
-				{
-					"name": "David Grudl",
-					"homepage": "https://davidgrudl.com"
-				},
-				{
-					"name": "Nette Community",
-					"homepage": "https://nette.org/contributors"
-				}
-			],
-			"description": "🔍 Nette Finder: find files and directories with an intuitive API.",
-			"homepage": "https://nette.org",
-			"keywords": [
-				"filesystem",
-				"glob",
-				"iterator",
-				"nette"
-			],
-			"support": {
-				"issues": "https://github.com/nette/finder/issues",
-				"source": "https://github.com/nette/finder/tree/v3.0.0"
-			},
-			"time": "2022-12-14T17:05:54+00:00"
+      "time": "2024-02-14T19:48:10+00:00"
 		},
 		{
 			"name": "nette/http",
@@ -960,12 +909,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/http.git",
-        "reference": "a631cf3f224765d96b2434a718cca2c4526ab3e1"
+        "reference": "c779293fb79e6d2a16d474cd19dce866615f3b9c"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/http/zipball/a631cf3f224765d96b2434a718cca2c4526ab3e1",
-        "reference": "a631cf3f224765d96b2434a718cca2c4526ab3e1",
+        "url": "https://api.github.com/repos/nette/http/zipball/c779293fb79e6d2a16d474cd19dce866615f3b9c",
+        "reference": "c779293fb79e6d2a16d474cd19dce866615f3b9c",
 				"shasum": ""
 			},
 			"require": {
@@ -984,7 +933,10 @@
 				"tracy/tracy": "^2.8"
 			},
 			"suggest": {
-				"ext-fileinfo": "to detect type of uploaded files"
+        "ext-fileinfo": "to detect MIME type of uploaded files by Nette\\Http\\FileUpload",
+        "ext-gd": "to use image function in Nette\\Http\\FileUpload",
+        "ext-intl": "to support punycode by Nette\\Http\\Url",
+        "ext-session": "to use Nette\\Http\\Session"
 			},
 			"type": "library",
 			"extra": {
@@ -1030,7 +982,7 @@
 				"issues": "https://github.com/nette/http/issues",
         "source": "https://github.com/nette/http/tree/v3.3"
 			},
-      "time": "2023-12-14T18:57:16+00:00"
+      "time": "2024-01-30T18:16:20+00:00"
 		},
 		{
 			"name": "nette/neon",
@@ -1107,12 +1059,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/php-generator.git",
-        "reference": "08ab9bff22ae34fe4e1d2fe8ba16b3770ea2459f"
+        "reference": "c0a147f4bdb638e13cabe10f37267d5082dca10f"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/php-generator/zipball/08ab9bff22ae34fe4e1d2fe8ba16b3770ea2459f",
-        "reference": "08ab9bff22ae34fe4e1d2fe8ba16b3770ea2459f",
+        "url": "https://api.github.com/repos/nette/php-generator/zipball/c0a147f4bdb638e13cabe10f37267d5082dca10f",
+        "reference": "c0a147f4bdb638e13cabe10f37267d5082dca10f",
 				"shasum": ""
 			},
 			"require": {
@@ -1167,9 +1119,9 @@
 			],
 			"support": {
 				"issues": "https://github.com/nette/php-generator/issues",
-        "source": "https://github.com/nette/php-generator/tree/v4.1.3"
+        "source": "https://github.com/nette/php-generator/tree/master"
 			},
-      "time": "2024-01-18T17:44:20+00:00"
+      "time": "2024-03-19T23:03:10+00:00"
 		},
 		{
 			"name": "nette/robot-loader",
@@ -1306,12 +1258,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/nette/utils.git",
-        "reference": "81e3e6d3313f1ddb4dfbaee7fba4b230162f004d"
+        "reference": "b8ec3bca2cd8d63e857f8c995fd097c776e0a1a5"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/nette/utils/zipball/81e3e6d3313f1ddb4dfbaee7fba4b230162f004d",
-        "reference": "81e3e6d3313f1ddb4dfbaee7fba4b230162f004d",
+        "url": "https://api.github.com/repos/nette/utils/zipball/b8ec3bca2cd8d63e857f8c995fd097c776e0a1a5",
+        "reference": "b8ec3bca2cd8d63e857f8c995fd097c776e0a1a5",
 				"shasum": ""
 			},
 			"require": {
@@ -1385,7 +1337,152 @@
 				"issues": "https://github.com/nette/utils/issues",
 				"source": "https://github.com/nette/utils/tree/master"
 			},
-      "time": "2024-01-17T16:50:36+00:00"
+      "time": "2024-02-03T18:07:33+00:00"
+    },
+    {
+      "name": "nyholm/psr7",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Nyholm/psr7.git",
+        "reference": "fd12ffc87a1e4014b2a7485b88add81c96d105e8"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Nyholm/psr7/zipball/fd12ffc87a1e4014b2a7485b88add81c96d105e8",
+        "reference": "fd12ffc87a1e4014b2a7485b88add81c96d105e8",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.2",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.1 || ^2.0"
+      },
+      "provide": {
+        "php-http/message-factory-implementation": "1.0",
+        "psr/http-factory-implementation": "1.0",
+        "psr/http-message-implementation": "1.0"
+      },
+      "require-dev": {
+        "http-interop/http-factory-tests": "^0.9",
+        "php-http/message-factory": "^1.0",
+        "php-http/psr7-integration-tests": "^1.0",
+        "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
+        "symfony/error-handler": "^4.4"
+      },
+      "default-branch": true,
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.8-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Nyholm\\Psr7\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Tobias Nyholm",
+          "email": "tobias.nyholm@gmail.com"
+        },
+        {
+          "name": "Martijn van der Ven",
+          "email": "martijn@vanderven.se"
+        }
+      ],
+      "description": "A fast PHP7 implementation of PSR-7",
+      "homepage": "https://tnyholm.se",
+      "keywords": [
+        "psr-17",
+        "psr-7"
+      ],
+      "support": {
+        "issues": "https://github.com/Nyholm/psr7/issues",
+        "source": "https://github.com/Nyholm/psr7/tree/master"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/Zegnat",
+          "type": "github"
+        },
+        {
+          "url": "https://github.com/nyholm",
+          "type": "github"
+        }
+      ],
+      "time": "2023-11-22T11:09:15+00:00"
+    },
+    {
+      "name": "nyholm/psr7-server",
+      "version": "1.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/Nyholm/psr7-server.git",
+        "reference": "4335801d851f554ca43fa6e7d2602141538854dc"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/4335801d851f554ca43fa6e7d2602141538854dc",
+        "reference": "4335801d851f554ca43fa6e7d2602141538854dc",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.1 || ^8.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0 || ^2.0"
+      },
+      "require-dev": {
+        "nyholm/nsa": "^1.1",
+        "nyholm/psr7": "^1.3",
+        "phpunit/phpunit": "^7.0 || ^8.5 || ^9.3"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Nyholm\\Psr7Server\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Tobias Nyholm",
+          "email": "tobias.nyholm@gmail.com"
+        },
+        {
+          "name": "Martijn van der Ven",
+          "email": "martijn@vanderven.se"
+        }
+      ],
+      "description": "Helper classes to handle PSR-7 server requests",
+      "homepage": "http://tnyholm.se",
+      "keywords": [
+        "psr-17",
+        "psr-7"
+      ],
+      "support": {
+        "issues": "https://github.com/Nyholm/psr7-server/issues",
+        "source": "https://github.com/Nyholm/psr7-server/tree/1.1.0"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/Zegnat",
+          "type": "github"
+        },
+        {
+          "url": "https://github.com/nyholm",
+          "type": "github"
+        }
+      ],
+      "time": "2023-11-08T09:30:43+00:00"
 		},
 		{
 			"name": "phpoption/phpoption",
@@ -1464,6 +1561,62 @@
       "time": "2023-11-12T22:52:20+00:00"
 		},
 		{
+      "name": "psr/http-factory",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/http-factory.git",
+        "reference": "7037f4b0950474e9d1350e8df89b15f1842085f6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/http-factory/zipball/7037f4b0950474e9d1350e8df89b15f1842085f6",
+        "reference": "7037f4b0950474e9d1350e8df89b15f1842085f6",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.0.0",
+        "psr/http-message": "^1.0 || ^2.0"
+      },
+      "default-branch": true,
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Http\\Message\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "PHP-FIG",
+          "homepage": "https://www.php-fig.org/"
+        }
+      ],
+      "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
+      "keywords": [
+        "factory",
+        "http",
+        "message",
+        "psr",
+        "psr-17",
+        "psr-7",
+        "request",
+        "response"
+      ],
+      "support": {
+        "source": "https://github.com/php-fig/http-factory"
+      },
+      "time": "2023-09-22T11:16:44+00:00"
+    },
+    {
 			"name": "psr/http-message",
       "version": "dev-master",
 			"source": {
@@ -1518,6 +1671,121 @@
       "time": "2023-04-04T09:54:51+00:00"
 		},
 		{
+      "name": "psr/http-server-handler",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/http-server-handler.git",
+        "reference": "13403d43196ab3382d0a4ca28be32984282641f9"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/13403d43196ab3382d0a4ca28be32984282641f9",
+        "reference": "13403d43196ab3382d0a4ca28be32984282641f9",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.0",
+        "psr/http-message": "^1.0 || ^2.0"
+      },
+      "default-branch": true,
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Http\\Server\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "PHP-FIG",
+          "homepage": "https://www.php-fig.org/"
+        }
+      ],
+      "description": "Common interface for HTTP server-side request handler",
+      "keywords": [
+        "handler",
+        "http",
+        "http-interop",
+        "psr",
+        "psr-15",
+        "psr-7",
+        "request",
+        "response",
+        "server"
+      ],
+      "support": {
+        "source": "https://github.com/php-fig/http-server-handler"
+      },
+      "time": "2023-11-16T18:17:39+00:00"
+    },
+    {
+      "name": "psr/http-server-middleware",
+      "version": "dev-master",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/http-server-middleware.git",
+        "reference": "459eeb7efeae55b4102a951c4ecc93a11ce58d0f"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/459eeb7efeae55b4102a951c4ecc93a11ce58d0f",
+        "reference": "459eeb7efeae55b4102a951c4ecc93a11ce58d0f",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.0",
+        "psr/http-message": "^1.0 || ^2.0",
+        "psr/http-server-handler": "^1.0"
+      },
+      "default-branch": true,
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Http\\Server\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "PHP-FIG",
+          "homepage": "https://www.php-fig.org/"
+        }
+      ],
+      "description": "Common interface for HTTP server-side middleware",
+      "keywords": [
+        "http",
+        "http-interop",
+        "middleware",
+        "psr",
+        "psr-15",
+        "psr-7",
+        "request",
+        "response"
+      ],
+      "support": {
+        "issues": "https://github.com/php-fig/http-server-middleware/issues",
+        "source": "https://github.com/php-fig/http-server-middleware"
+      },
+      "time": "2023-09-22T11:17:21+00:00"
+    },
+    {
 			"name": "psr/log",
 			"version": "dev-master",
 			"source": {
@@ -1574,12 +1842,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/symfony/polyfill-ctype.git",
-				"reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb"
+        "reference": "ef4d7e442ca910c4764bce785146269b30cb5fc4"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
-				"reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
+        "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ef4d7e442ca910c4764bce785146269b30cb5fc4",
+        "reference": "ef4d7e442ca910c4764bce785146269b30cb5fc4",
 				"shasum": ""
 			},
 			"require": {
@@ -1594,9 +1862,6 @@
 			"default-branch": true,
 			"type": "library",
 			"extra": {
-				"branch-alias": {
-					"dev-main": "1.28-dev"
-				},
 				"thanks": {
 					"name": "symfony/polyfill",
 					"url": "https://github.com/symfony/polyfill"
@@ -1633,7 +1898,7 @@
 				"portable"
 			],
 			"support": {
-        "source": "https://github.com/symfony/polyfill-ctype/tree/v1.28.0"
+        "source": "https://github.com/symfony/polyfill-ctype/tree/v1.29.0"
 			},
 			"funding": [
 				{
@@ -1649,7 +1914,7 @@
 					"type": "tidelift"
 				}
 			],
-			"time": "2023-01-26T09:26:14+00:00"
+      "time": "2024-01-29T20:11:03+00:00"
 		},
 		{
 			"name": "symfony/polyfill-mbstring",
@@ -1657,12 +1922,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/symfony/polyfill-mbstring.git",
-        "reference": "42292d99c55abe617799667f454222c54c60e229"
+        "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34"
 			},
 			"dist": {
 				"type": "zip",
-        "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
-        "reference": "42292d99c55abe617799667f454222c54c60e229",
+        "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
+        "reference": "e5e7ddb00b859dbdf5ad8f3bbe4cd29a3a37aa34",
 				"shasum": ""
 			},
 			"require": {
@@ -1677,9 +1942,6 @@
 			"default-branch": true,
 			"type": "library",
 			"extra": {
-				"branch-alias": {
-					"dev-main": "1.28-dev"
-				},
 				"thanks": {
 					"name": "symfony/polyfill",
 					"url": "https://github.com/symfony/polyfill"
@@ -1717,7 +1979,7 @@
 				"shim"
 			],
 			"support": {
-        "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.28.0"
+        "source": "https://github.com/symfony/polyfill-mbstring/tree/1.x"
 			},
 			"funding": [
 				{
@@ -1733,7 +1995,7 @@
 					"type": "tidelift"
 				}
 			],
-      "time": "2023-07-28T09:04:16+00:00"
+      "time": "2024-03-14T13:49:05+00:00"
 		},
 		{
 			"name": "symfony/polyfill-php80",
@@ -1741,12 +2003,12 @@
 			"source": {
 				"type": "git",
 				"url": "https://github.com/symfony/polyfill-php80.git",
-				"reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
+        "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
-				"reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+        "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+        "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
 				"shasum": ""
 			},
 			"require": {
@@ -1755,9 +2017,6 @@
 			"default-branch": true,
 			"type": "library",
 			"extra": {
-				"branch-alias": {
-					"dev-main": "1.28-dev"
-				},
 				"thanks": {
 					"name": "symfony/polyfill",
 					"url": "https://github.com/symfony/polyfill"
@@ -1801,7 +2060,7 @@
 				"shim"
 			],
 			"support": {
-        "source": "https://github.com/symfony/polyfill-php80/tree/v1.28.0"
+        "source": "https://github.com/symfony/polyfill-php80/tree/v1.29.0"
 			},
 			"funding": [
 				{
@@ -1817,7 +2076,7 @@
 					"type": "tidelift"
 				}
 			],
-			"time": "2023-01-26T09:26:14+00:00"
+      "time": "2024-01-29T20:11:03+00:00"
 		},
 		{
 			"name": "tracy/tracy",

@@ -2,26 +2,30 @@
 
 namespace LAC\Modules\Tables\Controllers;
 
+use App\Api\Response\ErrorDto;
+use App\Api\Response\ErrorType;
 use JsonException;
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
 use Lsr\Core\Exceptions\ValidationException;
+use Psr\Http\Message\ResponseInterface;
 
 class TablesController extends Controller
 {
 
 	/**
 	 * @param Table $table
-	 * @return never
+	 *
+	 * @return ResponseInterface
 	 * @throws JsonException
 	 * @throws ValidationException
 	 */
-	public function cleanTable(Table $table): never {
+	public function cleanTable(Table $table): ResponseInterface {
 		if (!$table->clean()) {
-			$this->respond(['error' => 'Clean failed'], 500);
+			return $this->respond(new ErrorDto('Clean failed', ErrorType::INTERNAL), 500);
 		}
 
-		$this->respond(['status' => 'ok']);
+		return $this->respond('');
 	}
 
 	/**
@@ -29,17 +33,17 @@ class TablesController extends Controller
 	 * @return never
 	 * @throws JsonException
 	 */
-	public function get(Table $table): never {
-		$this->respond($table);
+	public function get(Table $table): ResponseInterface {
+		return $this->respond($table);
 	}
 
 	/**
-	 * @return never
-	 * @throws ValidationException
+	 * @return ResponseInterface
 	 * @throws JsonException
+	 * @throws ValidationException
 	 */
-	public function getAll(): never {
-		$this->respond(['tables' => array_values(Table::getAll())]);
+	public function getAll(): ResponseInterface {
+		return $this->respond(['tables' => array_values(Table::getAll())]);
 	}
 
 }
