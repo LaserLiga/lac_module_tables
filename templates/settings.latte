@@ -7,20 +7,20 @@
 
 {block content}
 	<div class="me-4 last-save-wrapper text-end position-fixed end-0">
-		{lang 'Last saved:'} <span class="last-save" data-target="#tables-settings-form">{lang 'never'}</span>
+        {_'Naposledy uloženo:'} <span class="last-save" data-target="#tables-settings-form">{_'never'}</span>
 	</div>
 
 	{foreach $notices as $notice}
 		{alert $notice['content'], $notice['type']}
 	{/foreach}
 
-	<h2>{lang 'Tables', context: 'settings'}:</h2>
+    <h2>{_'Tables', context: 'settings'}:</h2>
 
 	<form action="{link ['settings', 'tables', 'new']}" method="post" class="my-3">
 		<p class="text-center">
 			<button type="submit" class="btn btn-primary btn-lg">
 				<i class="fa-solid fa-plus"></i>
-				{lang 'Nový stůl'}
+                {_'Nový stůl'}
 			</button>
 		</p>
 	</form>
@@ -36,28 +36,28 @@
 				<div class="input-group mb-3">
 					<div class="form-floating">
 						<input type="text" name="table[{$table->id}][name]" value="{$table->name}" class="form-control"
-							   id="table-name-{$table->id}" placeholder="{lang 'Název'}">
-						<label for="table-name-{$table->id}">{lang 'Název'}</label>
+                               id="table-name-{$table->id}" placeholder="{_'Název'}">
+                        <label for="table-name-{$table->id}">{_'Název'}</label>
 					</div>
 					<button type="button" class="btn btn-danger delete">
 						<i class="fa-solid fa-trash"></i>
 					</button>
 				</div>
-				<h5>{lang 'Pozice'}:</h5>
+                <h5>{_'Pozice'}:</h5>
 				<div class="input-group mb-3">
 					<div class="form-floating">
 						<input type="number" min="1" step="1" name="table[{$table->id}][grid_col]"
 							   value="{$table->grid->col}"
 							   class="form-control col-input"
-							   id="table-grid_col-{$table->id}" placeholder="{lang 'Sloupec'}">
-						<label for="table-grid_col-{$table->id}">{lang 'Sloupec'}</label>
+                               id="table-grid_col-{$table->id}" placeholder="{_'Sloupec'}">
+                        <label for="table-grid_col-{$table->id}">{_'Sloupec'}</label>
 					</div>
 					<div class="form-floating">
 						<input type="number" min="1" step="1" name="table[{$table->id}][grid_row]"
 							   value="{$table->grid->row}"
 							   class="form-control row-input"
-							   id="table-grid_row-{$table->id}" placeholder="{lang 'Řádek'}">
-						<label for="table-grid_row-{$table->id}">{lang 'Řádek'}</label>
+                               id="table-grid_row-{$table->id}" placeholder="{_'Řádek'}">
+                        <label for="table-grid_row-{$table->id}">{_'Řádek'}</label>
 					</div>
 				</div>
 
@@ -66,22 +66,22 @@
 						<input type="number" min="1" step="1" name="table[{$table->id}][grid_width]"
 							   value="{$table->grid->width}"
 							   class="form-control width-input"
-							   id="table-grid_width-{$table->id}" placeholder="{lang 'Šířka'}">
-						<label for="table-grid_width-{$table->id}">{lang 'Šířka'}</label>
+                               id="table-grid_width-{$table->id}" placeholder="{_'Šířka'}">
+                        <label for="table-grid_width-{$table->id}">{_'Šířka'}</label>
 					</div>
 					<div class="form-floating">
 						<input type="number" min="1" step="1" name="table[{$table->id}][grid_height]"
 							   value="{$table->grid->height}"
 							   class="form-control height-input"
-							   id="table-grid_height-{$table->id}" placeholder="{lang 'Výška'}">
-						<label for="table-grid_height-{$table->id}">{lang 'Výška'}</label>
+                               id="table-grid_height-{$table->id}" placeholder="{_'Výška'}">
+                        <label for="table-grid_height-{$table->id}">{_'Výška'}</label>
 					</div>
 				</div>
 			</div>
 		</section>
 		<p class="text-center">
 			<button type="submit" class="btn btn-success">
-				<i class="fa-solid fa-save"></i> {lang 'Uložit', context: 'actions'}
+                <i class="fa-solid fa-save"></i> {_'Uložit', context: 'actions'}
 			</button>
 		</p>
 	</form>

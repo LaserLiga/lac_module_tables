@@ -53,14 +53,14 @@ class SettingsController extends Controller
 				$this->respond(new ErrorDto('Failed to create the table'), 500);
 			}
 			$request->passErrors[] = lang('Nepodařilo se vytvořit objekt', context: 'errors');
-			return App::redirect(['settings', 'tables'], $request);
+        return $this->app->redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
 			return $this->respond('');
 		}
 		$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně vytvořeno')];
-		return App::redirect(['settings', 'tables'], $request);
+      return $this->app->redirect(['settings', 'tables'], $request);
 	}
 
 	/**
@@ -75,14 +75,14 @@ class SettingsController extends Controller
 				return $this->respond(new ErrorDto('Failed to delete the table'), 500);
 			}
 			$request->passErrors[] = lang('Nepodařilo se smazat objekt', context: 'errors');
-			return App::redirect(['settings', 'tables'], $request);
+        return $this->app->redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
 			return $this->respond('');
 		}
 		$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně smazáno')];
-		return App::redirect(['settings', 'tables'], $request);
+      return $this->app->redirect(['settings', 'tables'], $request);
 	}
 
 	public function saveTables(Request $request): ResponseInterface {
@@ -114,7 +114,7 @@ class SettingsController extends Controller
 				return $this->respond('');
 			}
 			$request->passNotices[] = ['type' => 'success', 'content' => lang('Úspěšně uloženo')];
-			return App::redirect(['settings', 'tables'], $request);
+        return $this->app->redirect(['settings', 'tables'], $request);
 		}
 
 		if ($request->isAjax()) {
@@ -122,6 +122,6 @@ class SettingsController extends Controller
 		}
 
 		$request->passErrors = $request->errors;
-		return App::redirect(['settings', 'tables'], $request);
+      return $this->app->redirect(['settings', 'tables'], $request);
 	}
 }
