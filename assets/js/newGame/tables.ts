@@ -1,8 +1,8 @@
-import {TableData} from "./interfaces";
-import {GameGroupDataBase} from "../../../../../assets/js/interfaces/gameInterfaces";
-import {cleanTable, getTable, getTables} from "../api/tables";
-import {lang} from "../../../../../assets/js/includes/frameworkFunctions";
-import {NewGameGroupInterface} from "../../../../../assets/js/interfaces/groups";
+import {TableData} from './interfaces';
+import {GameGroupDataBase} from '../../../../../assets/js/interfaces/gameInterfaces';
+import {cleanTable, getTable, getTables} from '../api/tables';
+import {lang} from '../../../../../assets/js/includes/frameworkFunctions';
+import {NewGameGroupInterface} from '../../../../../assets/js/interfaces/groups';
 
 export default class NewGameTables {
 
@@ -74,8 +74,8 @@ export default class NewGameTables {
         cleanBtn.addEventListener('click', () => {
             document.dispatchEvent(new CustomEvent('loading.start'));
             cleanTable(id)
-                .then(() => {
-                    this.updateTable(id);
+	            .then(response => {
+		            this.updateTableData(response);
                     document.dispatchEvent(new CustomEvent('loading.stop'));
                 })
                 .catch(() => {

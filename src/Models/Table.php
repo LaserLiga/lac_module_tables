@@ -15,7 +15,7 @@ use Lsr\Core\Models\Model;
 class Table extends Model
 {
 
-	public const TABLE = 'tables';
+    public const string TABLE = 'tables';
 
 	public string $name;
 

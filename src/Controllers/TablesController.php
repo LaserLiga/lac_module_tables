@@ -25,7 +25,7 @@ class TablesController extends Controller
 			return $this->respond(new ErrorDto('Clean failed', ErrorType::INTERNAL), 500);
 		}
 
-		return $this->respond('');
+      return $this->respond($table);
 	}
 
 	/**

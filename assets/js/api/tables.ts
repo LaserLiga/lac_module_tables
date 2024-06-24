@@ -1,5 +1,5 @@
-import {ErrorResponse, fetchGet, fetchPost} from "../../../../../assets/js/includes/apiClient";
-import {TableData} from "../newGame/interfaces";
+import {fetchGet, fetchPost} from '../../../../../assets/js/includes/apiClient';
+import {TableData} from '../newGame/interfaces';
 
 export type TablesResponse = { tables: TableData[] }
 
@@ -11,6 +11,6 @@ export async function getTable(id: number): Promise<TableData> {
     return fetchGet(`/tables/${id}`, null, {Accept: 'application/json'});
 }
 
-export async function cleanTable(id: number): Promise<'' | ErrorResponse> {
+export async function cleanTable(id: number): Promise<TableData> {
     return fetchPost(`/tables/${id}/clean`, null, {Accept: 'application/json'});
 }
