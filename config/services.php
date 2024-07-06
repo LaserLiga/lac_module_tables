@@ -1,9 +1,9 @@
 <?php
 
 return [
-	'parameters' => [
-		'tables' => [
-			'root' => dirname(__DIR__) . '/',
-		],
-	],
+    'parameters' => [
+        'tables' => [
+            'root' => dirname(__DIR__) . '/',
+        ],
+    ],
 ];

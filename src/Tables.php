@@ -6,11 +6,9 @@ use LAC\Modules\Core\Module;
 
 class Tables extends Module
 {
+    public const NAME = 'Stoly';
 
-	public const NAME = 'Stoly';
-
-	public function init(): void {
-		parent::init();
-	}
-
+    public function init(): void {
+        parent::init();
+    }
 }
