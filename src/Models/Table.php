@@ -10,18 +10,22 @@ use Lsr\Core\Models\Attributes\Instantiate;
 use Lsr\Core\Models\Attributes\OneToOne;
 use Lsr\Core\Models\Attributes\PrimaryKey;
 use Lsr\Core\Models\Model;
+use OpenApi\Attributes\Property;
+use OpenApi\Attributes\Schema;
 
+#[Schema(schema: "Table", type: 'object')]
 #[PrimaryKey('id_table')]
 class Table extends Model
 {
     public const string TABLE = 'tables';
 
+    #[Property]
     public string $name;
 
-    #[Instantiate]
+    #[Instantiate, Property]
     public Grid $grid;
 
-    #[OneToOne]
+    #[OneToOne, Property]
     public ?GameGroup $group = null;
 
     /**

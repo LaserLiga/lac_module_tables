@@ -2,23 +2,25 @@
 
 namespace LAC\Modules\Tables\Controllers;
 
-use App\Api\Response\ErrorDto;
-use JsonException;
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
 use Lsr\Core\Exceptions\ModelNotFoundException;
 use Lsr\Core\Exceptions\ValidationException;
+use Lsr\Core\Requests\Dto\ErrorResponse;
 use Lsr\Core\Requests\Request;
 use Lsr\Exceptions\TemplateDoesNotExistException;
 use Lsr\Logging\Exceptions\DirectoryCreationException;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ *
+ */
 class SettingsController extends Controller
 {
     /**
-     * @return void
-     * @throws ValidationException
+     * @return ResponseInterface
      * @throws TemplateDoesNotExistException
+     * @throws ValidationException
      */
     public function tables(): ResponseInterface {
         $this->params['addJs'] = ['modules/tables/settings.js'];
@@ -40,8 +42,7 @@ class SettingsController extends Controller
 
     /**
      * @param Request $request
-     * @return never
-     * @throws JsonException
+     * @return ResponseInterface
      * @throws ValidationException
      */
     public function addTable(Request $request): ResponseInterface {
@@ -49,7 +50,7 @@ class SettingsController extends Controller
         $table->name = lang('Stůl');
         if (!$table->save()) {
             if ($request->isAjax()) {
-                $this->respond(new ErrorDto('Failed to create the table'), 500);
+                $this->respond(new ErrorResponse('Failed to create the table'), 500);
             }
             $request->passErrors[] = lang('Nepodařilo se vytvořit objekt', context: 'errors');
             return $this->app->redirect(['settings', 'tables'], $request);
@@ -63,15 +64,14 @@ class SettingsController extends Controller
     }
 
     /**
-     * @param Table $table
-     * @param Request $request
-     * @return never
-     * @throws JsonException
+     * @param  Table  $table
+     * @param  Request  $request
+     * @return ResponseInterface
      */
     public function deleteTable(Table $table, Request $request): ResponseInterface {
         if (!$table->delete()) {
             if ($request->isAjax()) {
-                return $this->respond(new ErrorDto('Failed to delete the table'), 500);
+                return $this->respond(new ErrorResponse('Failed to delete the table'), 500);
             }
             $request->passErrors[] = lang('Nepodařilo se smazat objekt', context: 'errors');
             return $this->app->redirect(['settings', 'tables'], $request);
@@ -117,7 +117,10 @@ class SettingsController extends Controller
         }
 
         if ($request->isAjax()) {
-            return $this->respond(new ErrorDto('An error has occured', values: ['errors' => $request->errors]), 500);
+            return $this->respond(
+                new ErrorResponse('An error has occured', values: ['errors' => $request->errors]),
+                500
+            );
         }
 
         $request->passErrors = $request->errors;
