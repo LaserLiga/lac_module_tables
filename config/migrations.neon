@@ -14,8 +14,28 @@ tables:
           CONSTRAINT `tables_ibfk_1` FOREIGN KEY (`id_group`) REFERENCES `game_groups` (`id_group`) ON DELETE SET NULL ON UPDATE CASCADE
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 		'''
+		foreignKeys:
+			-
+				column: 'id_group'
+				refTable: App\Models\GameGroup
+				refColumn: 'id_group'
 	App\GameModels\Game\Evo5\Game:
 		modifications:
 			always:
 				- 'ADD `id_table` int(11) unsigned DEFAULT NULL AFTER `id_group`'
-				- 'ADD FOREIGN KEY IF NOT EXISTS (`id_table`) REFERENCES `tables` (`id_table`) ON DELETE SET NULL ON UPDATE CASCADE'
+		foreignKeys:
+			-
+				column: 'id_table'
+				refTable: LAC\Modules\Tables\Models\Table
+				refColumn: 'id_table'
+				onDelete: 'SET NULL'
+	App\GameModels\Game\Evo6\Game:
+		modifications:
+			always:
+				- 'ADD `id_table` int(11) unsigned DEFAULT NULL AFTER `id_group`'
+		foreignKeys:
+			-
+				column: 'id_table'
+				refTable: LAC\Modules\Tables\Models\Table
+				refColumn: 'id_table'
+				onDelete: 'SET NULL'
