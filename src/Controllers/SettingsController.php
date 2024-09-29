@@ -2,6 +2,7 @@
 
 namespace LAC\Modules\Tables\Controllers;
 
+use App\Core\Info;
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
 use Lsr\Core\Exceptions\ModelNotFoundException;
@@ -24,10 +25,19 @@ class SettingsController extends Controller
      */
     public function tables(): ResponseInterface {
         $this->params['addJs'] = ['modules/tables/settings.js'];
-        $this->params['tables'] = Table::getAll();
-        $this->params['cols'] = 1;
-        $this->params['rows'] = 1;
-        foreach ($this->params['tables'] as $table) {
+        $this->params['tables'] = [];
+        $this->params['cols'] = (int) Info::get('table_column_count', 10);
+        $this->params['rows'] = (int) Info::get('table_row_count', 10);
+        foreach (Table::getAll() as $table) {
+            $this->params['tables'][$table->grid->row] ??= [];
+
+            // If duplicate, find first available column
+            while (isset($this->params['tables'][$table->grid->row][$table->grid->col])) {
+                $table->grid->col++;
+            }
+
+            $this->params['tables'][$table->grid->row][$table->grid->col] = $table;
+
             $endCol = $table->grid->col + $table->grid->width - 1;
             if ($this->params['cols'] < $endCol) {
                 $this->params['cols'] = $endCol;
@@ -85,6 +95,11 @@ class SettingsController extends Controller
     }
 
     public function saveTables(Request $request): ResponseInterface {
+        $columns = (int) $request->getPost('columns', 10);
+        Info::set('table_column_count', $columns);
+        $rows = (int) $request->getPost('rows', 10);
+        Info::set('table_row_count', $rows);
+
         /** @var array<numeric, array{name:string,grid_col?:numeric,grid_row?:numeric,grid_width?:numeric,grid_height?:numeric}> $tables */
         $tables = $request->getPost('table', []);
         foreach ($tables as $id => $tableInfo) {
