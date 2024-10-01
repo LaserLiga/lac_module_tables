@@ -26,10 +26,15 @@ window.addEventListener('load', () => {
             deleteTable(id)
 				.then(() => {
 					stopLoading(true);
+					const empty = document.createElement('div');
+					empty.classList.add('draggable-empty');
+					empty.dataset.row = table.dataset.row;
+					empty.dataset.column = table.dataset.column;
+					table.replaceWith(empty);
 					table.remove();
 				})
 				.catch(error => {
-                    console.error(error);
+					console.error(error);
 					stopLoading(false);
 				})
 		});

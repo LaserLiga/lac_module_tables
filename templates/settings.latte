@@ -45,7 +45,10 @@
                             data-id="{$table->id}" id="table-{$table->id}" data-row="{$row}"
                             data-col="{$col}" data-width="{$table->grid->width}"
                             data-height="{$table->grid->height}"
-                            class="draggable-item table-item bg-primary d-flex flex-column align-items-center justify-content-center p-2">
+                            class="draggable-item with-handle table-item bg-primary d-flex flex-column align-items-center justify-content-center p-2">
+                            <div class="w-100 handle text-bg-secondary py-2 text-center mb-2 rounded">
+                                <i class="fa-solid fa-grip-lines"></i>
+                            </div>
                         <div class="input-group mb-3">
                             <div class="form-floating">
                                 <input type="text" name="table[{$table->id}][name]" value="{$table->name}" class="form-control"
