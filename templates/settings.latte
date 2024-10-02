@@ -19,7 +19,7 @@
 	<form action="{link ['settings', 'tables', 'new']}" method="post" class="my-3">
 		<p class="text-center">
 			<button type="submit" class="btn btn-primary btn-lg">
-				<i class="fa-solid fa-plus"></i>
+				{faSolid 'plus'}
                 {_'Nový stůl'}
 			</button>
 		</p>
@@ -47,7 +47,7 @@
                             data-height="{$table->grid->height}"
                             class="draggable-item with-handle table-item bg-primary d-flex flex-column align-items-center justify-content-center p-2">
                             <div class="w-100 handle text-bg-secondary py-2 text-center mb-2 rounded">
-                                <i class="fa-solid fa-grip-lines"></i>
+                                {faSolid 'grip-lines'}
                             </div>
                         <div class="input-group mb-3">
                             <div class="form-floating">
@@ -56,7 +56,7 @@
                                 <label for="table-name-{$table->id}">{_'Název'}</label>
                             </div>
                             <button type="button" class="btn btn-danger delete">
-                                <i class="fa-solid fa-trash"></i>
+                                {faSolid 'trash'}
                             </button>
                         </div>
                         <h5>{_'Velikost'}:</h5>
@@ -92,7 +92,7 @@
 		</section>
 		<p class="text-center">
 			<button type="submit" class="btn btn-success">
-                <i class="fa-solid fa-save"></i> {_'Uložit', context: 'actions'}
+                {faSolid 'save'} {_'Uložit', context: 'actions'}
 			</button>
 		</p>
 	</form>
