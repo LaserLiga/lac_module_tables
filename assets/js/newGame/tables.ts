@@ -3,6 +3,7 @@ import {GameGroupDataBase} from '../../../../../assets/js/interfaces/gameInterfa
 import {cleanTable, getTable, getTables} from '../api/tables';
 import {lang} from '../../../../../assets/js/includes/frameworkFunctions';
 import {NewGameGroupInterface} from '../../../../../assets/js/interfaces/groups';
+import {triggerNotificationError} from '../../../../../assets/js/includes/notifications';
 
 export default class NewGameTables {
 
@@ -78,7 +79,8 @@ export default class NewGameTables {
 		            this.updateTableData(response);
                     document.dispatchEvent(new CustomEvent('loading.stop'));
                 })
-                .catch(() => {
+                .catch((e) => {
+		                triggerNotificationError(e);
                     document.dispatchEvent(new CustomEvent('loading.error'));
                 })
         });

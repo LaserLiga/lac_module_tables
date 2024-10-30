@@ -1,6 +1,7 @@
 import {startLoading, stopLoading} from '../../../../assets/js/loaders';
 import {deleteTable} from './api/settings';
 import DraggableGrid from '../../../../assets/js/components/draggableGrid';
+import {triggerNotificationError} from '../../../../assets/js/includes/notifications';
 
 window.addEventListener('load', () => {
 	const tables = document.querySelectorAll('.table-item') as NodeListOf<HTMLDivElement>;
@@ -34,7 +35,7 @@ window.addEventListener('load', () => {
 					table.remove();
 				})
 				.catch(error => {
-					console.error(error);
+					triggerNotificationError(error);
 					stopLoading(false);
 				})
 		});
