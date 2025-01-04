@@ -2,9 +2,10 @@ includes:
 	- ./services.php
 parameters:
 	tables:
-	routing:
-		routeFiles:
-			- %tables.root%config/routes.php
+
+routing:
+	routeFiles:
+		- %tables.root%config/routes.php
 services:
 	tables.module:
 		type: LAC\Modules\Tables\Tables

@@ -3,7 +3,7 @@
 namespace LAC\Modules\Tables\DataObjects;
 
 use Dibi\Row;
-use Lsr\Core\Models\Interfaces\InsertExtendInterface;
+use Lsr\Orm\Interfaces\InsertExtendInterface;
 
 /**
  *

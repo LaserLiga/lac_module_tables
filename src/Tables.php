@@ -6,7 +6,7 @@ use LAC\Modules\Core\Module;
 
 class Tables extends Module
 {
-    public const NAME = 'Stoly';
+    public const string NAME = 'Stoly';
 
     public function init(): void {
         parent::init();

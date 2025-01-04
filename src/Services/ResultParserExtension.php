@@ -6,7 +6,7 @@ use App\GameModels\Game\Game;
 use App\Tools\AbstractResultsParser;
 use LAC\Modules\Core\ResultParserExtensionInterface;
 use LAC\Modules\Tables\Models\Table;
-use Lsr\Core\Exceptions\ModelNotFoundException;
+use Lsr\Orm\Exceptions\ModelNotFoundException;
 
 class ResultParserExtension implements ResultParserExtensionInterface
 {

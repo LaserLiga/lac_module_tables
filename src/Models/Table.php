@@ -2,20 +2,20 @@
 
 namespace LAC\Modules\Tables\Models;
 
+use App\Models\BaseModel;
 use App\Models\GameGroup;
 use DateTimeInterface;
 use LAC\Modules\Tables\DataObjects\Grid;
-use Lsr\Core\Exceptions\ValidationException;
-use Lsr\Core\Models\Attributes\Instantiate;
-use Lsr\Core\Models\Attributes\OneToOne;
-use Lsr\Core\Models\Attributes\PrimaryKey;
-use Lsr\Core\Models\Model;
+use Lsr\ObjectValidation\Exceptions\ValidationException;
+use Lsr\Orm\Attributes\Instantiate;
+use Lsr\Orm\Attributes\PrimaryKey;
+use Lsr\Orm\Attributes\Relations\OneToOne;
 use OpenApi\Attributes\Property;
 use OpenApi\Attributes\Schema;
 
 #[Schema(schema: "Table", type: 'object')]
 #[PrimaryKey('id_table')]
-class Table extends Model
+class Table extends BaseModel
 {
     public const string TABLE = 'tables';
 
@@ -31,13 +31,13 @@ class Table extends Model
     /**
      * Create a group
      *
-     * @param bool $overwrite
-     * @param DateTimeInterface|null $date
+     * @param  bool  $overwrite
+     * @param  DateTimeInterface|null  $date
      *
      * @return GameGroup
      * @throws ValidationException
      */
-    public function createGroup(bool $overwrite = false, ?DateTimeInterface $date = null): GameGroup {
+    public function createGroup(bool $overwrite = false, ?DateTimeInterface $date = null) : GameGroup {
         if (!$overwrite && isset($this->group)) {
             // Prevent creating multiple groups when there is already one
             return $this->group;
@@ -49,9 +49,9 @@ class Table extends Model
 
         $this->group = new GameGroup();
         $this->group->name = sprintf(
-            lang('Stůl %s', context: 'tables') . ' - %s',
-            $this->name,
-            isset($date) ? $date->format('d.m.Y H:i') : date('d.m.Y H:i')
+          lang('Stůl %s', context: 'tables').' - %s',
+          $this->name,
+          isset($date) ? $date->format('d.m.Y H:i') : date('d.m.Y H:i')
         );
         $this->group->active = true;
         $this->group->save();
@@ -67,7 +67,7 @@ class Table extends Model
      * @return bool
      * @throws ValidationException
      */
-    public function clean(): bool {
+    public function clean() : bool {
         if (isset($this->group)) {
             $this->group->active = false;
             $this->group->save();

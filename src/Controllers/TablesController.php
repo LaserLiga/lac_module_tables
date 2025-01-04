@@ -4,7 +4,7 @@ namespace LAC\Modules\Tables\Controllers;
 
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
-use Lsr\Core\Exceptions\ValidationException;
+use Lsr\ObjectValidation\Exceptions\ValidationException;
 use Lsr\Core\Requests\Dto\ErrorResponse;
 use Lsr\Core\Requests\Enums\ErrorType;
 use OpenApi\Attributes as OA;
