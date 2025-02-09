@@ -2,15 +2,15 @@
 
 namespace LAC\Modules\Tables\Services;
 
-use App\GameModels\Game\Game;
-use App\Tools\AbstractResultsParser;
-use LAC\Modules\Core\ResultParserExtensionInterface;
 use LAC\Modules\Tables\Models\Table;
+use Lsr\Lg\Results\AbstractResultsParser;
+use Lsr\Lg\Results\Interface\Models\GameInterface;
+use Lsr\Lg\Results\Interface\ResultParserExtensionInterface;
 use Lsr\Orm\Exceptions\ModelNotFoundException;
 
 class ResultParserExtension implements ResultParserExtensionInterface
 {
-    public function parse(Game $game, array $meta, AbstractResultsParser $parser): void {
+    public function parse(GameInterface $game, array $meta, AbstractResultsParser $parser) : void {
         // Assign game to the table
         if (!empty($meta['table'])) {
             try {
