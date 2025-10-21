@@ -19,7 +19,7 @@ tables:
 				column: 'id_group'
 				refTable: App\Models\GameGroup
 				refColumn: 'id_group'
-	App\GameModels\Game\Evo5\Game:
+	App\GameModels\Game\LaserMaxx\Evo5\Game:
 		modifications:
 			always:
 				- 'ADD `id_table` int(11) unsigned DEFAULT NULL AFTER `id_group`'
@@ -29,7 +29,7 @@ tables:
 				refTable: LAC\Modules\Tables\Models\Table
 				refColumn: 'id_table'
 				onDelete: 'SET NULL'
-	App\GameModels\Game\Evo6\Game:
+	App\GameModels\Game\LaserMaxx\Evo6\Game:
 		modifications:
 			always:
 				- 'ADD `id_table` int(11) unsigned DEFAULT NULL AFTER `id_group`'
