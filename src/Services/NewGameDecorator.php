@@ -2,7 +2,7 @@
 
 namespace LAC\Modules\Tables\Services;
 
-use App\Controllers\NewGame;
+use App\Http\Controllers\NewGame;
 use LAC\Modules\Core\ControllerDecoratorInterface;
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Interfaces\ControllerInterface;
