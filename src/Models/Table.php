@@ -37,9 +37,8 @@ class Table extends BaseModel
      * @return GameGroup
      * @throws ValidationException
      */
-    public function createGroup(bool $overwrite = false, ?DateTimeInterface $date = null): GameGroup
-    {
-        if (!$overwrite && isset($this->group)) {
+    public function createGroup(bool $overwrite = false, ?DateTimeInterface $date = null): GameGroup {
+        if ( ! $overwrite && isset($this->group)) {
             // Prevent creating multiple groups when there is already one
             return $this->group;
         }
@@ -52,7 +51,7 @@ class Table extends BaseModel
         $this->group->name = sprintf(
             lang('Stůl %s', context: 'tables') . ' - %s',
             $this->name,
-            isset($date) ? $date->format('d.m.Y H:i') : date('d.m.Y H:i')
+            isset($date) ? $date->format('d.m.Y H:i') : date('d.m.Y H:i'),
         );
         $this->group->active = true;
         $this->group->save();
@@ -68,8 +67,7 @@ class Table extends BaseModel
      * @return bool
      * @throws ValidationException
      */
-    public function clean(): bool
-    {
+    public function clean(): bool {
         if (isset($this->group)) {
             $this->group->active = false;
             $this->group->save();

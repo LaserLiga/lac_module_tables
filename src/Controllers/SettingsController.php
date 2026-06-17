@@ -5,17 +5,14 @@ namespace LAC\Modules\Tables\Controllers;
 use App\Core\Info;
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
-use Lsr\Orm\Exceptions\ModelNotFoundException;
-use Lsr\ObjectValidation\Exceptions\ValidationException;
 use Lsr\Core\Requests\Dto\ErrorResponse;
 use Lsr\Core\Requests\Request;
 use Lsr\Exceptions\TemplateDoesNotExistException;
 use Lsr\Logging\Exceptions\DirectoryCreationException;
+use Lsr\ObjectValidation\Exceptions\ValidationException;
+use Lsr\Orm\Exceptions\ModelNotFoundException;
 use Psr\Http\Message\ResponseInterface;
 
-/**
- *
- */
 class SettingsController extends Controller
 {
     /**
@@ -58,7 +55,7 @@ class SettingsController extends Controller
     public function addTable(Request $request): ResponseInterface {
         $table = new Table();
         $table->name = lang('Stůl');
-        if (!$table->save()) {
+        if ( ! $table->save()) {
             if ($request->isAjax()) {
                 $this->respond(new ErrorResponse('Failed to create the table'), 500);
             }
@@ -79,7 +76,7 @@ class SettingsController extends Controller
      * @return ResponseInterface
      */
     public function deleteTable(Table $table, Request $request): ResponseInterface {
-        if (!$table->delete()) {
+        if ( ! $table->delete()) {
             if ($request->isAjax()) {
                 return $this->respond(new ErrorResponse('Failed to delete the table'), 500);
             }
@@ -118,7 +115,7 @@ class SettingsController extends Controller
             $table->grid->width = (int)($tableInfo['grid_width'] ?? 1);
             $table->grid->height = (int)($tableInfo['grid_height'] ?? 1);
 
-            if (!$table->save()) {
+            if ( ! $table->save()) {
                 $request->errors[] = sprintf(lang('Failed to save table #%d', context: 'errors'), $id);
             }
         }
@@ -134,7 +131,7 @@ class SettingsController extends Controller
         if ($request->isAjax()) {
             return $this->respond(
                 new ErrorResponse('An error has occured', values: ['errors' => $request->errors]),
-                500
+                500,
             );
         }
 

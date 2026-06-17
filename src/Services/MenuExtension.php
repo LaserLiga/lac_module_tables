@@ -10,7 +10,7 @@ class MenuExtension implements MenuExtensionInterface
      * @inheritDoc
      */
     public function extend(array &$menu): void {
-        if (!isset($menu['settings'])) {
+        if ( ! isset($menu['settings'])) {
             return;
         }
         $menu['settings']['children'][] = [

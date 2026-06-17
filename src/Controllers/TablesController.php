@@ -4,15 +4,12 @@ namespace LAC\Modules\Tables\Controllers;
 
 use LAC\Modules\Tables\Models\Table;
 use Lsr\Core\Controllers\Controller;
-use Lsr\ObjectValidation\Exceptions\ValidationException;
 use Lsr\Core\Requests\Dto\ErrorResponse;
 use Lsr\Core\Requests\Enums\ErrorType;
+use Lsr\ObjectValidation\Exceptions\ValidationException;
 use OpenApi\Attributes as OA;
 use Psr\Http\Message\ResponseInterface;
 
-/**
- *
- */
 class TablesController extends Controller
 {
     /**
@@ -26,7 +23,7 @@ class TablesController extends Controller
     #[OA\Response(response: 200, description: 'Table cleaned', content: new OA\JsonContent(ref: '#/components/schemas/Table'))]
     #[OA\Response(response: 500, description: 'Error', content: new OA\JsonContent(ref: '#/components/schemas/ErrorResponse'))]
     public function cleanTable(Table $table): ResponseInterface {
-        if (!$table->clean()) {
+        if ( ! $table->clean()) {
             return $this->respond(new ErrorResponse('Clean failed', ErrorType::INTERNAL), 500);
         }
 

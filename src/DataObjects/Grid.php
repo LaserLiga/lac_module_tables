@@ -5,9 +5,6 @@ namespace LAC\Modules\Tables\DataObjects;
 use Dibi\Row;
 use Lsr\Orm\Interfaces\InsertExtendInterface;
 
-/**
- *
- */
 class Grid implements InsertExtendInterface
 {
     public function __construct(

@@ -2,7 +2,6 @@
 
 use LAC\Modules\Tables\Controllers\SettingsController;
 use LAC\Modules\Tables\Controllers\TablesController;
-use Lsr\Core\Routing\Route;
 
 /** @var \Lsr\Core\Routing\Router $this */
 
