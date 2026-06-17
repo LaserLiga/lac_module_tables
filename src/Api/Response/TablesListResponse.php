@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LAC\Modules\Tables\Api\Response;
 
 use OpenApi\Attributes as OA;

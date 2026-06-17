@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LAC\Modules\Tables;
 
 use LAC\Modules\Core\Module;
