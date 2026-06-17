@@ -2,8 +2,9 @@
 
 use LAC\Modules\Tables\Controllers\SettingsController;
 use LAC\Modules\Tables\Controllers\TablesController;
+use Lsr\Core\Routing\Router;
 
-/** @var \Lsr\Core\Routing\Router $this */
+/** @var Router $this */
 
 $this->group('settings/tables')
     ->get('', [SettingsController::class, 'tables'])->name('settings-tables')
